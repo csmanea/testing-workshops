@@ -9,7 +9,7 @@ If you still find yourself stuck or would like to report an issue with the works
 
 For more about getting support using our email, click [here](#HowtoFormatYourSupportEmailRequest).
 
-Join our Cloud Coaching Events Slack channel (click [here](https://join.slack.com/t/cloudcoachingevents/shared_invite/zt-15ychn3y9-FlI6cUFVhhEI7b5MUWysOA)) to be part of the conversation and raise your questions to our Cloud Experts live session
+Join our Cloud Coaching Events Slack channel (click [here](https://join.slack.com/t/cloudcoachingevents/shared_invite/zt-15ychn3y9-FlI6cUFVhhEI7b5MUWysOA)) to be part of the conversation and raise your questions to our Cloud Experts
 
 ![](images/Slack.PNG)
 
