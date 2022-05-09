@@ -122,6 +122,8 @@ A common usage of Block Volume is adding storage capacity to an Oracle Cloud Inf
 
     >**Note:** When mounting a storage volume for the first time, you can format the storage volume and create a single, primary partition that occupies the entire volume by using fdisk command (Caution: Using fdisk to format the disk deletes any data on the disk).
 
+_Congratulations! You have successfully completed the lab._
+
 ## Acknowledgements
 
 - **Author** - Rajeshwari Rai, Prasenjit Sarkar 
