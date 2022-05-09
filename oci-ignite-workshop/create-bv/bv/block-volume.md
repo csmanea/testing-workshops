@@ -19,11 +19,7 @@ In this lab, you will:
 
 ### Prerequisites
 
-* An Oracle Cloud Account - please view this workshop's LiveLabs landing page to see which environments are supported.
-
->**Note:** If you have a **Free Trial** account, when your Free Trial expires, your account will be converted to an **Always Free** account. You will not be able to conduct Free Tier workshops unless the Always Free environment is available. 
-
-**[Click here for the Free Tier FAQ page.](https://www.oracle.com/cloud/free/faq.html)**
+Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create a basic environment for you to use on your tenancy.
  
 ## Task 1: Create a Block Volume
 
@@ -35,12 +31,11 @@ A common usage of Block Volume is adding storage capacity to an Oracle Cloud Inf
 
 2. In Block Volume service, click **Create Block Volume** and provide the following details:
 
-    <if type="freetier">
+    
      - **Name:** BV-DEMO
-     - **Compartment:** Demo</if>
-     <if type="livelabs">
+     - **Compartment:** Demo
      - **Name:** username-BV
-     - **Compartment:** username-compartment</if>
+     - **Compartment:** username-compartment
      - **Availability Domain:** It must be the same as the AD you chose for your instance
      - **Size**: Please choose **50 GB**
      - **Backup Policy**: **Gold**
@@ -57,16 +52,13 @@ A common usage of Block Volume is adding storage capacity to an Oracle Cloud Inf
 
 3. Leave the encryption and tags options as their default values and click **Create Block Volume**. The volume will be ready to attach once its icon no longer lists it as **PROVISIONING** in the volume list.
 
-   <if type="freetier">
+  
    ![](images/block-volume.png " ")
    ![](images/available.png " ")
-   </if>
-   <if type="livelabs">
    ![](images/create-livelabs.png)
    ![](images/create-livelabs-prov.png)
    ![](images/create-livelabs-avail.png)
-   </if>
-
+  
 ## Task 2: Attach a Block Volume to an Instance
 
 1. Once the Block Volume is created, you can attach it to the VM instance you just launched on Compute Practice. When you attach a block volume to a VM instance, you have two options for attachment type, iSCSI or paravirtualized.
@@ -77,10 +69,10 @@ A common usage of Block Volume is adding storage capacity to an Oracle Cloud Inf
 
 2. Go to the Compute Instances Menu, and navigate to the VM instance you created before. Click **Attached block volumes**.
 
-    <if type="freetier">
-    ![Attached block volumes](images/attached-bv.png " ")</if>
-    <if type="livelabs">
-    ![Attached block volumes](images/livelabs-attach.png)</if>
+    
+    ![Attached block volumes](images/attached-bv.png " ")
+   
+    ![Attached block volumes](images/livelabs-attach.png)
 
 3. Click **Attach block volume**.
 
@@ -91,17 +83,17 @@ A common usage of Block Volume is adding storage capacity to an Oracle Cloud Inf
      - **Attachment mode:** iSCSI
      - Click **Attach**
 
-   <if type="freetier">
-   ![Volume Details](images/attach-bv.png " ")</if>
-   <if type="livelabs">
-   ![Volume Details](images/livelabs-attach-block.png)</if>
+  
+   ![Volume Details](images/attach-bv.png " ")
+   
+   ![Volume Details](images/livelabs-attach-block.png)
 
 5. Once the volume is attached, you can click on the ellipsis and then click **iSCSI commands and information**.
 
-    <if type="freetier">
-    ![iSCSI commands](images/command.png " ")</if>
-    <if type="livelabs">
-    ![iSCSI commands](images/livelabs-iscsi-link.png)</if>
+    
+    ![iSCSI commands](images/command.png " ")
+    
+    ![iSCSI commands](images/livelabs-iscsi-link.png)
 
 6. Connect to the instance through SSH and **run the iSCSI Connect Commands**. 
     Click **Copy** to copy all connect commands. Run all these commands by pasting them in the cloud shell:
