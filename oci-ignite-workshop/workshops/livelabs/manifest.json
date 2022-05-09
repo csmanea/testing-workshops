@@ -1,0 +1,49 @@
+{
+    "workshoptitle": "Get Started with Oracle Cloud Infrastructure Core Services",
+    "help": "livelabs-help-oci_us@oracle.com",
+	"tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "./../../intro/intro.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "Login to Oracle Cloud",
+            "filename": "../../../oci-ignite-workshop/cloud-login/cloud-login-livelabs-ignite.md"
+        },
+        {
+            "title": "Lab 1: Create a Compartment",
+            "type": "livelabs",
+            "filename": "../../../oci-ignite-workshop/iam/identity-access-management-identity-domain.md"
+        },
+        {
+            "title": "Lab 2: Create a Virtual Cloud Network",
+            "type": "livelabs",
+            "filename": "../../../oci-ignite-workshop/create-vcn/create-vcn.md"
+        },
+        {
+            "title": "Lab 3: Generate SSH Keys",
+            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/generate-ssh-key/generate-ssh-keys.md"
+        },        
+        {
+            "title": "Lab 4: Create a Compute Service",
+            "type": "livelabs",
+            "filename": "../../../oci-ignite-workshop/create-compute/create-compute.md"
+        },    
+        {
+            "title": "Lab 5: Create and Attach a Block Volume",
+            "type": "livelabs",
+            "filename": "../../../block-volume/bv/block-volume.md"
+        },
+        {
+            "title": "Lab 6 (Optional): Create an Object Storage",
+            "type": "livelabs",
+            "filename": "../../../object-storage/object-storage/object-storage.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/need-help/need-help-livelabs.md"
+        }
+    ]
+}
