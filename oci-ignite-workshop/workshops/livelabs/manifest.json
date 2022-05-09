@@ -33,12 +33,12 @@
         {
             "title": "Lab 5: Create and Attach a Block Volume",
             "type": "livelabs",
-            "filename": "../../../block-volume/bv/block-volume.md"
+            "filename": "../../../oci-ignite-workshop/block-volume/bv/block-volume.md"
         },
         {
             "title": "Lab 6 (Optional): Create an Object Storage",
             "type": "livelabs",
-            "filename": "../../../object-storage/object-storage/object-storage.md"
+            "filename": "../../../oci-ignite-workshop/object-storage/object-storage/object-storage.md"
         },
         {
             "title": "Need Help?",
