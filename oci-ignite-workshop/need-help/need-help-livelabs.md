@@ -11,7 +11,7 @@ For more about getting support using our email, click [here](#HowtoFormatYourSup
 
 Join our **Cloud Coaching Events** Slack channel (click [here](https://join.slack.com/t/cloudcoachingevents/shared_invite/zt-15ychn3y9-FlI6cUFVhhEI7b5MUWysOA)) to be part of the conversation and raise your questions to our *Cloud Experts*.
 
-![](images/slack-channel.png)
+![](images/slack-channel2.png)
 
 ### Common Issues Table of Contents
   - [Can't Login to Oracle Cloud](#CantLogintoOracleCloud)
