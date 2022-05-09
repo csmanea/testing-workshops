@@ -67,6 +67,8 @@ To create a VCN on Oracle Cloud Infrastructure:
 
 This VCN will contain all of the other assets that you will create during this set of labs. In real-world situations, you would create multiple VCNs based on their need for access (which ports to open) and who can access them. Both of these concepts are covered in the next lab ***Create a Compute Service***.
 
+_Congratulations! You have successfully completed the lab._
+
 ## Acknowledgements
 
 - **Author** - Rajeshwari Rai, Prasenjit Sarkar 

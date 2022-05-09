@@ -83,7 +83,7 @@ An Oracle Cloud Infrastructure VM compute instance runs on the same hardware as 
     ![](images/ssh.png)
 
 
-You have completed this lab. You may now **proceed to the next lab**.
+_Congratulations! You have successfully completed the lab._
 
 ## Acknowledgements
 
