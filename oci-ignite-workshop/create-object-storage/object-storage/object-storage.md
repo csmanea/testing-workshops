@@ -42,13 +42,8 @@ In this lab, you will:
 
 	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/storage-buckets.png " ")
 
-2. 
-  <if type="freetier">
-  Select the compartment that you want to create your bucket in. 
-  </if>
-  <if type="livelabs">
-  Select the compartment that you are assigned to. Expand **c4u04 (root)**, **Livelabs**, then click **your\_user\_name-COMPARTMENT**.
-  ![Select Compartment](images/select-compartment.png " ")</if>
+2. Select the compartment that you want to create your bucket in. 
+ 
   Click **Create Bucket**.
   ![](images/create-bucket.png " ")
 
@@ -57,7 +52,7 @@ In this lab, you will:
     - Bucket Name: Provide a name
     - Default Storage Tier: Standard
 
-4.  Click **Create**.
+  Click **Create**.
 
   ![](images/bucket-details.png " ")
 
@@ -74,7 +69,7 @@ In this lab, you will:
 
   ![](images/upload.png " ")
 
-4. Click **select files** and select the *sample-file.txt* you just downloaded. Click **Upload** in the Dialog box, then click **Close**.
+4. Click **select files** and select the *[sample-file.txt](https://objectstorage.us-ashburn-1.oraclecloud.com/p/FJ8cOXrQeIJeOHR0b6U_5wUrRgwNPEQjsd80tpMMpc_HV2ROskAhOZ-yVuptKjUj/n/c4u04/b/oci-library/o/sample-file.txt)* you just downloaded. Click **Upload** in the Dialog box, then click **Close**.
   ![](images/upload-sample-file.png)
 
 5. File should be visible under Objects. Click Action icon and click **Create Pre-Authenticated Request**. This will create a web link that can be used to access the object without requiring any additional authentication.
@@ -111,5 +106,5 @@ _Congratulations! You have successfully completed the lab._
 
 - **Author** - Flavio Pereira, Larry Beausoleil 
 - **Contributors** - Arabella Yao, Rajeshwari Rai, Prasenjit Sarkar
-- **Last Updated By/Date** - Kamryn Vinson, April 2022
+- **Last Updated By/Date** - Cristian Manea, Radu Chiru, May 2022
 
