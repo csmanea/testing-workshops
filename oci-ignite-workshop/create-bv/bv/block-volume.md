@@ -50,14 +50,13 @@ A common usage of Block Volume is adding storage capacity to an Oracle Cloud Inf
 
     - **Gold Policy**: The gold policy includes daily incremental backups. These backups are retained for seven days. This policy also includes weekly incremental backups that run on Sunday and are retained for four weeks. Also includes monthly incremental backups, run on the first day of the month, retained for twelve months, and a full backup, run yearly on January 1st. Full backups are retained for five years.
 
+     ![](images/block-volume1.png " ")
+
 3. Leave the encryption and tags options as their default values and click **Create Block Volume**. The volume will be ready to attach once its icon no longer lists it as **PROVISIONING** in the volume list.
 
   
-   ![](images/block-volume.png " ")
-   ![](images/available.png " ")
-   ![](images/create-livelabs.png)
-   ![](images/create-livelabs-prov.png)
-   ![](images/create-livelabs-avail.png)
+   ![](images/available1.png " ")
+   
   
 ## Task 2: Attach a Block Volume to an Instance
 
@@ -67,16 +66,14 @@ A common usage of Block Volume is adding storage capacity to an Oracle Cloud Inf
 
      - **Paravirtualized:** Paravirtualized attachments are now an option when attaching volumes to VM instances. For VM instances launched from Oracle-Provided Images, you can select this option for Linux-based images published. Once you attach a volume using the paravirtualized attachment type, it is ready to use. You do not need to run any additional commands. However, due to the overhead of virtualization, this reduces the maximum IOPS performance for larger block volumes. See [Paravirtualized Attachment Performance](https://docs.cloud.oracle.com/iaas/Content/Block/Concepts/blockvolumeperformance.htm#paraPerf) for more information.
 
-2. Go to the Compute Instances Menu, and navigate to the VM instance you created before. Click **Attached block volumes**.
+2. Go to the Compute Instances Menu, and navigate to the VM instance you created before. Click **Attached instances**. Then click **Attach to Instance**.
 
     
-    ![Attached block volumes](images/attached-bv.png " ")
+    ![Attached block volumes](images/attached-bv1.png " ")
    
-    ![Attached block volumes](images/livelabs-attach.png)
+ 
 
-3. Click **Attach block volume**.
-
-4. Click **Select volume** and choose the following options:
+3. Click **Select volume** and choose the following options:
 
      - **Volume:** Select the volume created
      - **Device Path:** Select `/dev/oracleoci/oraclevdb`
@@ -84,23 +81,22 @@ A common usage of Block Volume is adding storage capacity to an Oracle Cloud Inf
      - Click **Attach**
 
   
-   ![Volume Details](images/attach-bv.png " ")
+   ![Volume Details](images/attach-bv1.png " ")
    
-   ![Volume Details](images/livelabs-attach-block.png)
+   ![Volume Details](images/attach-bv2.png)
 
-5. Once the volume is attached, you can click on the ellipsis and then click **iSCSI commands and information**.
+4. Once the volume is attached, you can click on the ellipsis and then click **iSCSI commands and information**.
 
     
-    ![iSCSI commands](images/command.png " ")
+    ![iSCSI commands](images/command1.png " ")
     
-    ![iSCSI commands](images/livelabs-iscsi-link.png)
-
-6. Connect to the instance through SSH and **run the iSCSI Connect Commands**. 
+    
+5. Connect to the instance through SSH and **run the iSCSI Connect Commands**. 
     Click **Copy** to copy all connect commands. Run all these commands by pasting them in the cloud shell:
 
-    ![](images/iscsi-commands.png " ")
+    ![](images/iscsi-commands1.png " ")
 
-7. Once the disk is attached, you can run the following commands to format the disk and mount it.
+6. Once the disk is attached, you can run the following commands to format the disk and mount it.
      ```
      # <copy>ls -l /dev/oracleoci/oraclevd*</copy>
      ```
@@ -118,7 +114,7 @@ A common usage of Block Volume is adding storage capacity to an Oracle Cloud Inf
      # <copy>df -h</copy>
      ```
 
-    ![](images/format-mount.png " ")
+    ![](images/format-mount1.png " ")
 
     >**Note:** When mounting a storage volume for the first time, you can format the storage volume and create a single, primary partition that occupies the entire volume by using fdisk command (Caution: Using fdisk to format the disk deletes any data on the disk).
 
@@ -128,5 +124,5 @@ _Congratulations! You have successfully completed the lab._
 
 - **Author** - Rajeshwari Rai, Prasenjit Sarkar 
 - **Contributors** - Oracle LiveLabs QA Team (Kamryn Vinson, QA Intern, Arabella Yao, Product Manager, DB Product Management)
-- **Last Updated By/Date** - Arabella Yao, December 2021
+- **Last Updated By/Date** - Cristian Manea, Radu Chiru, May 2022
 
