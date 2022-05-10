@@ -40,8 +40,8 @@ Click on the next lab in this workshop to get started.
 
 ## Acknowledgements
 
-- **Author** - Cristian Manea, Radu Chiru
-- **Contributors** - Thomas Goulding, Violeta Blendea
-- **Last Updated By/Date** - Cristian Manea, April 2022
+- **Author** - Flavio Pereira, Larry Beausoleil
+- **Contributors** - Oracle LiveLabs QA Team (Kamryn Vinson, QA Intern, Arabella Yao, Product Manager, DB Product Management)
+- **Last Updated By/Date** - Cristian Manea, Radu Chiru, May 2022
 
 

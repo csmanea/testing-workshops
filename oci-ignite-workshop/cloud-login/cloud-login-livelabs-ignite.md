@@ -37,4 +37,4 @@ You may now proceed to the next lab.
 ## Acknowledgements
 - **Created By/Date** - Kay Malcolm, Database Product Management, March 2020
 - **Contributors** - John Peach, Kamryn Vinson, Rene Fontcha
-- **Last Updated By** - Cristian Manea, Digital Customer Experience, May 2022
+- **Last Updated By** - Cristian Manea, Radu Chiru, May 2022
