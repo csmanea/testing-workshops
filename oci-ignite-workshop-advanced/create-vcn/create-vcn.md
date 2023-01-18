@@ -19,7 +19,6 @@ In this lab, you will:
 
 Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create a basic environment for you to use on your tenancy.
 
-
 ## Task 1: Create Your VCN
 
 Here is an instructional video, going through the process of making a VCN:

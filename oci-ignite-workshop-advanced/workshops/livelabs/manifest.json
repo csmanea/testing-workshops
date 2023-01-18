@@ -9,15 +9,15 @@
         {
             "title": "Get Started",
             "description": "Login to Oracle Cloud",
-            "filename": "../../../oci-ignite-workshop/cloud-login/cloud-login-livelabs-ignite.md"
+            "filename": "../../../oci-ignite-advanced/cloud-login/cloud-login-livelabs-ignite.md"
         },
         {
             "title": "Lab 1: Manage Users, Groups, and Policies to Control Access",
-            "filename": "../../../oci-ignite-workshop/iam/identity-access-management-identity-domain.md"
+            "filename": "../../../oci-ignite-advanced/iam/identity-access-management-identity-domain.md"
         },
         {
             "title": "Lab 2: Manage a Virtual Cloud Network",
-            "filename": "../../../oci-ignite-workshop/create-vcn/create-vcn.md"
+            "filename": "../../../oci-ignite-advanced/create-vcn/create-vcn.md"
         },
         {
             "title": "Lab 3: Create an Autonomous Database",
@@ -25,20 +25,20 @@
         },        
         {
             "title": "Lab 4 (Optional): Create a Kubernetes Cluster",
-            "filename": "../../../oci-ignite-workshop/create-compute/create-compute.md"
+            "filename": "../../../oci-ignite-advanced/create-compute/create-compute.md"
         },    
         {
             "title": "Lab 5: TBD",
-            "filename": "../../../oci-ignite-workshop/create-bv/bv/block-volume.md"
+            "filename": "../../../oci-ignite-advanced/create-bv/bv/block-volume.md"
         },
         {
             "title": "Lab 6 (Optional): TBD",
-            "filename": "../../../oci-ignite-workshop/create-object-storage/object-storage/object-storage.md"
+            "filename": "../../../oci-ignite-advanced/create-object-storage/object-storage/object-storage.md"
         },
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-            "filename": "../../../oci-ignite-workshop/need-help/need-help-livelabs.md"
+            "filename": "../../../oci-ignite-advanced/need-help/need-help-livelabs.md"
         }
     ]
 }
