@@ -11,18 +11,14 @@ Estimated Workshop Time: 1 hour and 30 minutes
 ### Objectives
 In this workshop, you will:
 - Get introduced to the regions available on Oracle Cloud
-- Understand and create your first compartment
+- Understand and create Identity and Access Management
 - Create a Virtual Cloud Network
-- Create a Compute instance
-- Generate a pair of SSH keys
-- Create and attach a Block Volume
+- Create an Autonomous Database
 
 **<font color="blue">Optional</font>**:
- - Learn how to grant access to users
- - Create an Object Storage bucket
-
+ - Create a Kubernetes Cluster
 ### Prerequisites
-Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create a basic environment for you to use on your tenancy.
+Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create an Level 100 environment for you to use on your tenancy.
 
 
 
