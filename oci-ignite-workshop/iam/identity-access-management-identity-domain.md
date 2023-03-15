@@ -178,7 +178,7 @@ For IAM with Identity Domains, what was identified before as IAM users and group
       b) Click the **Navigation Menu** in the upper left. Navigate to **Identity & Security** and select **Domains**. From the **Users** list, click the user account that you just created (for example, `Test User`)  to go to the User Details page.
          ![](images/id-domains.png)
 
-      C. Select the default domain.
+      C) Select the default domain.
          ![](images/id-domains-default.png " ")
 
       d) Under the **Resources** menu on the left, click **Users**, if it's not already selected.
