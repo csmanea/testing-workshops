@@ -48,7 +48,7 @@ To create a VCN on Oracle Cloud Infrastructure:
 
     |                  **Field**              |    **Value**  |
     |----------------------------------------|:------------:|
-    |VCN Name |OCI\_HOL\_VCN|
+    |VCN Name |VCN-Workshop|
     |Compartment |  Choose the ***Workshop*** compartment you created in the ***"Create a Compartment" Lab***
     |VCN CIDR Block|10.0.0.0/16|
     |Public Subnet CIDR Block|10.0.2.0/24|
@@ -58,6 +58,7 @@ To create a VCN on Oracle Cloud Infrastructure:
     Your screen should look similar to the following:
 
     ![Create a VCN Configuration|Foobar](images/vcn-configuration.png " ")
+    ![Subnet configuration|](images/wizard-2.png " ")
 
      Click the **Next** button at the bottom of the screen.
 

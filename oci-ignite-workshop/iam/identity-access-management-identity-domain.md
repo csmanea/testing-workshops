@@ -36,7 +36,7 @@ A compartment is a collection of cloud assets, like compute instances, load bala
 
 1. Click the **Navigation Menu** in the upper left, navigate to **Identity & Security** and select **Compartments**.
 
- ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/id-compartment.png " ")
+ ![Navigation Menu](images/id-compartments.png " ")
 
 1. Click **Create Compartment**.
    ![Create a compartment](images/create-compartment3.png)

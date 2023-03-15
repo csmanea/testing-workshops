@@ -32,7 +32,7 @@ Oracle Cloud Infrastructure is a set of complementary cloud services that enable
 
 This video briefly outlines the benefits of Oracle Cloud Infrastructure:
 
-[](youtube:-OBrKIlSt_Q) <font color="red">to be removed or updated</font>
+[](youtube:-OBrKIlSt_Q)
 
 ### Let's get Started!
 
@@ -42,6 +42,6 @@ Click on the next lab in this workshop to get started.
 
 - **Author** - Flavio Pereira, Larry Beausoleil
 - **Contributors** - Oracle LiveLabs QA Team (Kamryn Vinson, QA Intern, Arabella Yao, Product Manager, DB Product Management)
-- **Last Updated By/Date** - Cristian Manea, Radu Chiru, May 2022
+- **Last Updated By/Date** - Cristian Manea, Radu Chiru, March 2023
 
 
