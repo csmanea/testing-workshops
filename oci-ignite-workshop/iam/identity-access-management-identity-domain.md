@@ -175,41 +175,38 @@ For IAM with Identity Domains, what was identified before as IAM users and group
 
       a) Sign back in with the ***admin*** account.
 
-      b) Click the **Navigation Menu** in the upper left. Navigate to **Identity & Security** and select **Users**. From the **Users** list, click the user account that you just created (for example, `User01`)  to go to the User Details page.
-         ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/id-users.png " ")
+      b) Click the **Navigation Menu** in the upper left. Navigate to **Identity & Security** and select **Domains**. From the **Users** list, click the user account that you just created (for example, `Test User`)  to go to the User Details page.
+         ![](images/id-domains.png)
 
-      c) Under the **Resources** menu on the left, click **Groups**, if it's not already selected.
+      C. Select the default domain.
+         ![](images/id-domains-default.png " ")
 
-      d) Click **Add User to Group**.
-         ![](images/image020.png)
+      d) Under the **Resources** menu on the left, click **Users**, if it's not already selected.
+         ![Select Users](images/id-domains-users.png)
 
-      e) From the **Groups** drop-down list, select the **oci-group** that you created.
+      e) Click **Assign User to groups**.
+         ![](images/id-domains-users-assign-group.png)
 
-      f) Click **Add**.
-         ![Press the Add button](images/add-user-to-group.png)
+      f) From the **Groups** list, click the group that you just created (for example, `oci-group`)  to go to the User Details page.
 
-      g) Sign out of the Oracle Cloud website.
+      g) Click **Add**.
+         ![Press the Assign button](images/id-add-user-to-group.png)
+
+      h) Sign out of the Oracle Cloud website.
 
 10. Verify user permissions when a user belongs to a specific group.
 
-      a) Sign in with the local **User01** account you created. Remember to use the latest password you assigned to this user.
+      a) Sign in with the local **Test User** account you created. Remember to use the latest password you assigned to this user.
 
       b) Click the **Navigation Menu**. Click **Compute** and then click **Instances**.
 
-      c) Select compartment **Demo** from the list of compartments on the left.
+      c) Select compartment **Workshop** from the list of compartments on the left.
 
-      ![Select ***Demo***](images/select-demo.png)
+      ![Select ***Workshop***](images/select-demo.png)
 
-      d) There is no message related to permissions and you are allowed to create new instances.
+      d) There is no message related to permissions and you are allowed to create new instances.  
 
-      e) Click the **Navigation Menu**. click **Identity & Security** and select **Groups**.
-
-      f) The message **“Authorization failed or requested resource not found”** appears. This is expected, since your user has no permission to modify groups.
-      >**Note:** You may instead get the "An unexpected error occurred" message instead. That is also fine.
-
-      ![](images/group-error.png)
-
-      g) Sign out.
+      e) Sign out.
 
 </if>
 
@@ -217,5 +214,5 @@ _Congratulations! You have successfully completed the lab._
 
 ## Acknowledgements
 
-- **Author** - Orlando Gentil
+- **Author** - Cristian Manea
 - **Last Updated By/Date** - Cristian Manea, March 2023
