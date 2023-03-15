@@ -40,7 +40,7 @@ In this lab, you will:
 
 1. Click the **Navigation Menu** in the upper left, navigate to **Storage**, and select **Buckets**.
 
-	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/storage-buckets.png " ")
+	![](images/storage-buckets.png " ")
 
 2. Select the compartment that you want to create your bucket in. 
  
@@ -106,5 +106,5 @@ _Congratulations! You have successfully completed the lab._
 
 - **Author** - Flavio Pereira, Larry Beausoleil 
 - **Contributors** - Arabella Yao, Rajeshwari Rai, Prasenjit Sarkar
-- **Last Updated By/Date** - Cristian Manea, Radu Chiru, May 2022
+- **Last Updated By/Date** - Cristian Manea, Radu Chiru, March 2023
 

@@ -45,11 +45,11 @@ An Oracle Cloud Infrastructure VM compute instance runs on the same hardware as 
        
 4. Click *Change Shape* to choose a VM shape.
 
-    ![](images/create-compute-livelabs-3.png)
-
-5. Select *AMD Rome*, then select **1** as number of OCPUs, and **16 GB** as the amount of memory, and click **Select Shape**.
-
     ![](images/create-compute4.png)
+
+5. Select *AMD Rome E4 Flex*, then select **1** as number of OCPUs, and **16 GB** as the amount of memory, and click **Select Shape**.
+
+    ![](images/create-compute-shapes.png)
 
 7. In the Networking section, most of the defaults are perfect for our purposes. However, you will need to scroll down and select the **Assign a public IPv4 address** option.
  
@@ -89,4 +89,4 @@ _Congratulations! You have successfully completed the lab._
 
 - **Author** - Rajeshwari Rai, Prasenjit Sarkar 
 - **Contributors** - Oracle LiveLabs QA Team (Kamryn Vinson, QA Intern, Arabella Yao, Product Manager, DB Product Management)
-- **Last Updated By/Date** - Cristian Manea, Radu Chiru, March 2022
+- **Last Updated By/Date** - Cristian Manea, Radu Chiru, March 2023

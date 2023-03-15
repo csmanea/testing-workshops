@@ -18,6 +18,7 @@ In this lab, you will:
 ### Prerequisites
 
 Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create a basic environment for you to use on your tenancy.
+
 <if type="livelabs">
 You are running this workshop in a LiveLabs environment. Our LiveLabs environments use a pre-configured Virtual Cloud Network (VCN), so you will not create a VCN in this workshop. However, you can see how a VCN is created in Oracle Cloud Infrastructure by watching this short video:
 
@@ -37,7 +38,7 @@ To create a VCN on Oracle Cloud Infrastructure:
 
 1. On the Oracle Cloud Infrastructure Console Home page, under the **Launch Resources** header, click **Set up a network with a wizard**.
 
-    ![Setup a Network with a Wizard](images/setup-vcn.png " ")
+    ![Setup a Network with a Wizard](images/create-vcn-click-wizard.png " ")
 
 2. Select **Create VCN with Internet Connectivity**, and then click **Start VCN Wizard**.
 
@@ -67,8 +68,7 @@ To create a VCN on Oracle Cloud Infrastructure:
 
     ![Workflow](images/workflow.png " ")
 
-6. Once you see that the creation is complete (see previous screenshot), click the **View Virtual Cloud Network** button.
-
+6. Once you see that the creation is complete (see previous screenshot), click the **View VCN** button.
  </if>
 
 ### Summary
@@ -81,5 +81,7 @@ _Congratulations! You have successfully completed the lab._
 
 - **Author** - Rajeshwari Rai, Prasenjit Sarkar 
 - **Contributors** - Oracle LiveLabs QA Team (Kamryn Vinson, QA Intern, Arabella Yao, Product Manager, DB Product Management)
-- **Last Updated By/Date** - Radu Chiru, May 2022
+- **Last Updated By/Date** - Radu Chiru, March 2023
+
+
 
