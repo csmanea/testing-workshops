@@ -126,38 +126,35 @@ For IAM with Identity Domains, what was identified before as IAM users and group
 
    ![Reset password](images/id-domains-resetpw.png)
 
-1. Now, let’s create a security policy that gives your group permissions in your assigned compartment. For example, create a policy that gives permission to members of group **oci-group** in compartment **Demo**:
+1. Now, let’s create a security policy that gives your group permissions in your assigned compartment. For example, create a policy that gives permission to members of group **oci-group** in compartment **Workshop**:
 
    a) Click the **Navigation Menu** in the upper left. Navigate to **Identity & Security** and select **Policies**.
 
    ![IAM Policy](images/iam-policies.png)
 
-   b) On the left side, select **Demo** compartment.
+   b) On the left side, select **Workshop** compartment. After you have selected the **Workshop** compartment, click **Create Policy**.
 
-   ![Select ***Demo** compartment](images/id-domains-demo-compartment.png)
+   ![](images/id-domain-create-policy.png)
 
-      >**Note:** You may need to click on the + sign next to your main compartment name to be able to see the sub-compartment ***Demo***. If you do, and you still don't see the sub-compartment, ***refresh your browser***. Sometimes your browser caches the compartment information and does not update its internal cache.
-
-   c) After you have selected the **Demo** compartment, click **Create Policy**.
-      
-      ![](images/id-domain-create-policy.png)
-
-   d) Enter a unique **Name** for your policy (for example, "Policy-for-oci-group").
+      >**Note:** You may need to click on the + sign next to your main compartment name to be able to see the sub-compartment ***Workshop***. If you do, and you still don't see the sub-compartment, ***refresh your browser***. Sometimes your browser caches the compartment information and does not update its internal cache.
+    
+   
+   c) Enter a unique **Name** for your policy (for example, "Policy-for-oci-group").
       >**Note:** the name can NOT contain spaces.
 
-   e) Enter a **Description** (for example, "Policy for OCI Group").
+   d) Enter a **Description** (for example, "Policy for OCI Group").
 
-   f) Select **Demo** for compartment.
+   e) Select **Workshop** for compartment.
 
-   g) Click **Show manual editor** and enter the following **Statement**:
+   f) Click **Show manual editor** and enter the following **Statement**:
 
      ```
-     <copy>Allow group default/oci-group to manage all-resources in compartment Demo</copy>
+     <copy>Allow group default/oci-group to manage all-resources in compartment Workshop</copy>
      ```
 
      Note: If you do not include the *identity_domain_name* before the *group_name*, then the policy statement is evaluated as though the group belongs to the default identity domain.
 
-   h) Click **Create**.
+   g) Click **Create**.
 
    ![Create](images/create-policy.png)
 
@@ -165,7 +162,7 @@ For IAM with Identity Domains, what was identified before as IAM users and group
 
    a) Click the **Navigation Menu** in the upper left. Click **Compute** and then click **Instances**.
 
-   ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/compute-instances.png " ")
+   ![](images/compute-instances.png " ")
 
    b) Try to select any compartment from the left menu.
 
