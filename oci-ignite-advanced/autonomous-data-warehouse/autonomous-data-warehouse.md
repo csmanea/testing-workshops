@@ -236,7 +236,6 @@ Delete Auth Token and Autonomous Data Warehouse
 ## Acknowledgements
 *Congratulations! You have successfully completed the lab.*
 
-- **Author** - Flavio Pereira, Larry Beausoleil
-- **Adapted by** -  Yaisah Granillo, Cloud Solution Engineer
-- **Last Updated By/Date** - Yaisah Granillo, June 2020
+- **Author** - Cristian Manea
+- **Last Updated By/Date** - Cristian Manea, February 2022
 

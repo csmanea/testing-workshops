@@ -27,7 +27,7 @@ A common usage of Block Volume is adding storage capacity to an Oracle Cloud Inf
 
 1. Click the **Navigation Menu** in the upper left. Navigate to **Storage**, and click **Block Storage**.
 
-    ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/storage-block-storage.png " ")
+    ![](images/storage-block-storage.png " ")
 
 2. In Block Volume service, click **Create Block Volume** and provide the following details:
 
@@ -81,9 +81,7 @@ A common usage of Block Volume is adding storage capacity to an Oracle Cloud Inf
      - Click **Attach**
 
   
-   ![Volume Details](images/attach-bv1.png " ")
-   
-   ![Volume Details](images/attach-bv2.png)
+   ![Volume Details](images/attach-bv2.png " ")
 
 4. Once the volume is attached, you can click on the ellipsis and then click **iSCSI commands and information**.
 
@@ -124,5 +122,5 @@ _Congratulations! You have successfully completed the lab._
 
 - **Author** - Rajeshwari Rai, Prasenjit Sarkar 
 - **Contributors** - Oracle LiveLabs QA Team (Kamryn Vinson, QA Intern, Arabella Yao, Product Manager, DB Product Management)
-- **Last Updated By/Date** - Cristian Manea, Radu Chiru, May 2022
+- **Last Updated By/Date** - Cristian Manea, Radu Chiru, March 2023
 

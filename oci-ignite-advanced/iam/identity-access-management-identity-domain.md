@@ -13,8 +13,6 @@ Estimated time: 5 minutes
 In this lab, you will:
 
 - Create a compartment
-
-**<font color="blue">Optional</font>**:
 - Create a user
 - Create a group
 - Create a policy associated to the group
@@ -31,7 +29,7 @@ A compartment is a collection of cloud assets, like compute instances, load bala
 
 1. Click the **Navigation Menu** in the upper left, navigate to **Identity & Security** and select **Compartments**.
 
- ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/id-compartment.png " ")
+ ![Navigation Menu](images/id-compartments.png)
 
 1. Click **Create Compartment**.
    ![Create a compartment](images/create-compartment3.png)
@@ -42,7 +40,7 @@ A compartment is a collection of cloud assets, like compute instances, load bala
 
 1. You have just created a compartment for all of your work in this *Workshop*.
 
-##  Task 2 (Optional): Manage Users, Groups, and Policies to Control Access
+##  Task 2: Manage Users, Groups, and Policies to Control Access
 
 A user's permissions to access services comes from the _groups_ to which they belong. The permissions for a group are defined by policies. Policies define what actions members of a group can perform, and in which compartments. Users can access services and perform operations based on the policies set for the groups of which they are members.
 
@@ -104,7 +102,7 @@ For IAM with Identity Domains, what was identified before as IAM users and group
     Click **Create**.
 
       ![New user form](images/id-domains-create-user.png)
-
+ 
    After creating the user, you will be directed to the user details.
 
    The newly created user will receive an email with an activation link like this:

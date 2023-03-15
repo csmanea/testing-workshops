@@ -10,11 +10,16 @@ Estimated time: 5 minutes
 
 ### Objectives
 
+<if type="livelabs">
+You are running this workshop in a LiveLabs environment. Our LiveLabs environments use a pre-configured Identity and Access Management environment, so you will not be able to create a compartment, or to manage a user's access in this workshop. However, you can see how a compartment is created in Oracle Cloud Infrastructure by watching this short video:
+
+[](youtube:FSjQP5gqLAc)
+</if>
+
+<if type="freetier">
 In this lab, you will:
 
 - Create a compartment
-
-**<font color="blue">Optional</font>**:
 - Create a user
 - Create a group
 - Create a policy associated to the group
@@ -42,7 +47,7 @@ A compartment is a collection of cloud assets, like compute instances, load bala
 
 1. You have just created a compartment for all of your work in this *Workshop*.
 
-##  Task 2 (Optional): Manage Users, Groups, and Policies to Control Access
+##  Task 2: Manage Users, Groups, and Policies to Control Access
 
 A user's permissions to access services comes from the _groups_ to which they belong. The permissions for a group are defined by policies. Policies define what actions members of a group can perform, and in which compartments. Users can access services and perform operations based on the policies set for the groups of which they are members.
 
@@ -209,9 +214,11 @@ For IAM with Identity Domains, what was identified before as IAM users and group
 
       g) Sign out.
 
+</if>
+
 _Congratulations! You have successfully completed the lab._
 
 ## Acknowledgements
 
 - **Author** - Orlando Gentil
-- **Last Updated By/Date** - Cristian Manea, May 2022
+- **Last Updated By/Date** - Cristian Manea, March 2023

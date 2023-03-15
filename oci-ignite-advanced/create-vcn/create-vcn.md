@@ -30,7 +30,7 @@ To create a VCN on Oracle Cloud Infrastructure:
 
 1. On the Oracle Cloud Infrastructure Console Home page, under the **Launch Resources** header, click **Set up a network with a wizard**.
 
-    ![Setup a Network with a Wizard](images/setup-vcn.png " ")
+    ![Setup a Network with a Wizard](images/createRTpoza2.png " ")
 
 2. Select **Create VCN with Internet Connectivity**, and then click **Start VCN Wizard**.
 
@@ -40,8 +40,8 @@ To create a VCN on Oracle Cloud Infrastructure:
 
     |                  **Field**              |    **Value**  |
     |----------------------------------------|:------------:|
-    |VCN Name |OCI\_HOL\_VCN|
-    |Compartment |  Choose the ***Workshop*** compartment you created in the ***"Create a Compartment" Lab***
+    |VCN Name |OCI\_ADW\_VCN|
+    |Compartment |  Choose the ***Ignite_Advanced*** compartment you created in the ***"Create a Compartment" Lab***
     |VCN CIDR Block|10.0.0.0/16|
     |Public Subnet CIDR Block|10.0.2.0/24|
     |Private Subnet CIDR Block|10.0.1.0/24|
@@ -49,7 +49,7 @@ To create a VCN on Oracle Cloud Infrastructure:
 
     Your screen should look similar to the following:
 
-    ![Create a VCN Configuration|Foobar](images/vcn-configuration.png " ")
+    ![Create a VCN Configuration|Foobar](images/vcn_configuration.png " ")
 
      Click the **Next** button at the bottom of the screen.
 

@@ -12,8 +12,10 @@
             "filename": "../../../oci-ignite-workshop/cloud-login/cloud-login-livelabs-ignite.md"
         },
         {
-            "title": "Lab 1: Manage ",
+            "title": "Lab 1: Identity and Access Management",
+            "type": "livelabs",
             "filename": "../../../oci-ignite-workshop/iam/identity-access-management-identity-domain.md"
+            
         },
         {
             "title": "Lab 2: Create a Virtual Cloud Network",

@@ -12,27 +12,27 @@
             "filename": "../../../oci-ignite-advanced/cloud-login/cloud-login-livelabs-ignite.md"
         },
         {
-            "title": "Lab 1: Manage Users, Groups, and Policies to Control Access",
+            "title": "Ignite Basics: Manage Users, Groups, and Policies to Control Access",
             "filename": "../../../oci-ignite-advanced/iam/identity-access-management-identity-domain.md"
         },
         {
-            "title": "Lab 2: Manage a Virtual Cloud Network",
+            "title": "Lab 1: Manage a Virtual Cloud Network",
             "filename": "../../../oci-ignite-advanced/create-vcn/create-vcn.md"
         },
         {
-            "title": "Lab 3: Create an Autonomous Database",
-            "filename": ""
+            "title": "Lab 2: Create an Autonomous Database",
+            "filename": "../../../oci-ignite-advanced/autonomous-data-warehouse/autonomous-data-warehouse.md"
         },        
         {
-            "title": "Lab 4 (Optional): Create a Kubernetes Cluster",
+            "title": "Lab 3 (Optional): Create a Kubernetes Cluster",
             "filename": "../../../oci-ignite-advanced/create-compute/create-compute.md"
         },    
         {
-            "title": "Lab 5: TBD",
+            "title": "Lab 4: TBD",
             "filename": "../../../oci-ignite-advanced/create-bv/bv/block-volume.md"
         },
         {
-            "title": "Lab 6 (Optional): TBD",
+            "title": "Lab 5 (Optional): TBD",
             "filename": "../../../oci-ignite-advanced/create-object-storage/object-storage/object-storage.md"
         },
         {

@@ -12,13 +12,13 @@ Estimated Workshop Time: 1 hour and 30 minutes
 In this workshop, you will:
 - Get introduced to the regions available on Oracle Cloud
 - Understand and create your first compartment
+- Learn how to grant access to users
 - Create a Virtual Cloud Network
 - Create a Compute instance
 - Generate a pair of SSH keys
 - Create and attach a Block Volume
 
 **<font color="blue">Optional</font>**:
- - Learn how to grant access to users
  - Create an Object Storage bucket
 
 ### Prerequisites
