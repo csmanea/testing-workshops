@@ -148,8 +148,7 @@ _Congratulations! You have successfully completed the lab._
 
 ## Acknowledgements
 
-- **Author** - Rajeshwari Rai, Prasenjit Sarkar 
-- **Contributors** - Oracle LiveLabs QA Team (Kamryn Vinson, QA Intern, Arabella Yao, Product Manager, DB Product Management)
+- **Author** - Radu Chiru
 - **Last Updated By/Date** - Radu Chiru, March 2023
 
 
