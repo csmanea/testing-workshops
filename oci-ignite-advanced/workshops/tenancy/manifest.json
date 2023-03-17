@@ -1,0 +1,44 @@
+{
+    "workshoptitle": "Ignite your Oracle Cloud Infrastructure Services - ADVANCED",
+    "help": "livelabs-help-oci_us@oracle.com",
+	"tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "./../../intro/intro.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "Login to Oracle Cloud",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Ignite Basics: Manage Users, Groups, and Policies to Control Access",
+            "filename": "./../../iam/identity-access-management-identity-domain.md"
+        },
+        {
+            "title": "Lab 1: Create a Virtual Cloud Network",
+            "filename": "./../../create-vcn/create-vcn.md"
+        },
+        {
+            "title": "Lab 2: Create an Autonomous Database",
+            "filename": "./../../create-adw/autonomous-data-warehouse.md"
+        },        
+        {
+            "title": "Lab 3 (Optional): Create a Kubernetes Cluster",
+            "filename": "./../../create-compute/create-compute.md"
+        },    
+        {
+            "title": "Lab 2: Create an Autonomous Database",
+            "filename": "./../../autonomous-data-warehouse/autonomous-data-warehouse.md"
+        },
+        {
+            "title": "Lab 5 (Optional): TBD",
+            "filename": "./../../create-object-storage/object-storage/object-storage.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+        }
+    ]
+}

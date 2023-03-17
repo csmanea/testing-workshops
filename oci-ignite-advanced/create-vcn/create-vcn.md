@@ -1,36 +1,30 @@
-# Create Virtual Cloud Networks
+# Create a Virtual Cloud Network
 
 ## Introduction
 
 Oracle Cloud Infrastructure (OCI) Compute lets you create multiple Virtual Cloud Networks (VCNs). These VCNs will contain security lists, compute instances, load balancers and many other types of network assets.
 
-Be sure to review [Overview of Networking](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm) to gain a full understanding of the network components and their relationships, or take a look at this video:
-
-[](youtube:mIYSgeX5FkM)
+Be sure to review [Overview of Networking](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm) to gain a full understanding of the network components and their relationships.
 
 Estimated Time: 15 minutes
 
 
 ### Objectives
 In this lab, you will:
-- Create a virtual cloud network
+- Create a virtual cloud network configured for a database use case.
 
 ### Prerequisites
 
 Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create a basic environment for you to use on your tenancy.
 
-## Task 1: Create Your VCN
 
-Here is an instructional video, going through the process of making a VCN:
-
- [](youtube:lxQYHuvipx8)
-
+## Task 1: Create a VCN
 
 To create a VCN on Oracle Cloud Infrastructure:
 
 1. On the Oracle Cloud Infrastructure Console Home page, under the **Launch Resources** header, click **Set up a network with a wizard**.
 
-    ![Setup a Network with a Wizard](images/createRTpoza2.png " ")
+    ![Setup a Network with a Wizard](images/create-vcn-click-wizard.png " ")
 
 2. Select **Create VCN with Internet Connectivity**, and then click **Start VCN Wizard**.
 
@@ -40,8 +34,8 @@ To create a VCN on Oracle Cloud Infrastructure:
 
     |                  **Field**              |    **Value**  |
     |----------------------------------------|:------------:|
-    |VCN Name |OCI\_ADW\_VCN|
-    |Compartment |  Choose the ***Ignite_Advanced*** compartment you created in the ***"Create a Compartment" Lab***
+    |VCN Name |VCN-Workshop|
+    |Compartment |  Choose the ***Workshop*** compartment
     |VCN CIDR Block|10.0.0.0/16|
     |Public Subnet CIDR Block|10.0.2.0/24|
     |Private Subnet CIDR Block|10.0.1.0/24|
@@ -49,7 +43,8 @@ To create a VCN on Oracle Cloud Infrastructure:
 
     Your screen should look similar to the following:
 
-    ![Create a VCN Configuration|Foobar](images/vcn_configuration.png " ")
+    ![Create a VCN Configuration|Foobar](images/vcn-configuration.png " ")
+    ![Subnet configuration|](images/wizard-2.png " ")
 
      Click the **Next** button at the bottom of the screen.
 
@@ -60,12 +55,8 @@ To create a VCN on Oracle Cloud Infrastructure:
 
     ![Workflow](images/workflow.png " ")
 
-6. Once you see that the creation is complete (see previous screenshot), click the **View Virtual Cloud Network** button.
-
-
-
-
-## Task 2: Create Database Route Table
+6. Once you see that the creation is complete (see previous screenshot), click the **View VCN** button.
+## Task 2: Create a Route Table
 
 1. In the newly created VCN, navigate to Route Tables menu, and click **Create Route Table**.
 2. Complete the following fields:
@@ -73,13 +64,16 @@ To create a VCN on Oracle Cloud Infrastructure:
     |                  **Field**              |    **Value**  |
     |----------------------------------------|:------------:|
     | Name |RT_ADW|
-    |Compartment |  Choose the ***Demo*** compartment you created in the ***"Create a Compartment" Lab***
+    |Compartment |  Choose the ***Workshop*** compartment
     |Target Type|NAT Gateway|
     |Destination CIDR Block|0.0.0.0/0|
     |Compartment|Demo|
     |Target NAT Gateway| NAT Gateway-OCI_HOL_VCN|
 
-    Then add Another Route Table and complete the followin fields
+    ![Configure the Route Table](images/create-rt1-adb.png " ")
+
+
+    Then add Another Route Table and complete the following fields:
 
     |                  **Field**              |    **Value**  |
     |----------------------------------------|:------------:|
@@ -88,27 +82,30 @@ To create a VCN on Oracle Cloud Infrastructure:
     |Compartment|Demo|
     |Target Service Gateway| Service Gateway-OCI_HOL_VCN|
 
-    Then go with create.
+    ![Configure the Route Table](images/create-rt2-adb.png " ")
+
+    Then go with **Create**.
 
 
 
 
-## Task 3: Create Database Security List
+## Task 3: Create a Security List
 
 1. In the VCN , navigate to Security Lists menu, and click **Create Security List**.
-2. Complete the following fields (+Another Ingress Rule)
+2. Complete the following fields:
 
 
     |                  **Field**              |    **Value**  |
     |----------------------------------------|:------------:|
     | Name |SL_ADW|
-    |Compartment |  Choose the ***Demo*** compartment you created in the ***"Create a Compartment" Lab***
+    |Compartment |  Choose the ***Workshop*** compartment
     |Source CIDR Block|10.0.0.0/16|
     |IP Protocol|TCP
-    |Destination Port Range|2289|
+    |Destination Port Range|1521|
 
+      ![Configure the Security List](images/create-securitylist-ingress-adb.png " ")
 
-    Then add Another Egress Rule and complete the followin fields
+    Then add Another Egress Rule and complete the following fields
 
     |                  **Field**              |    **Value**  |
     |----------------------------------------|:------------:|
@@ -116,40 +113,44 @@ To create a VCN on Oracle Cloud Infrastructure:
     |IP Protocol|TCP
     |Destination Port Range|ALL|
 
-    Then go with Create Security List. 
+    ![Configure the Security List](images/create-securitylist-egress-adb.png " ")
+
+    Then go with **Create Security List**. 
 
 
-## Task 4: Create Database Subnet
+## Task 4: Create a Subnet to access Autonomous Database
 
 1. In the VCN , navigate to Subnets menu, and click **Create Subnet**.
-2. Complete the following fields (+Another Ingress Rule)
+2. Complete the following fields:
 
 
     |                  **Field**              |    **Value**  |
     |----------------------------------------|:------------:|
     | Name |Subnet_ADB|
-    |Compartment |  Choose the ***Demo*** compartment you created in the ***"Create a Compartment" Lab***
+    |Compartment |  Choose the ***Workshop*** compartment
     |Subnet Type|Regional|
     |IPv4 CIDR Block|10.0.3.0/24|
     |Route Table|RT_ADB
     |Subnet Access|Private Subnet|
     |Security List|SL_ADB
 
+    ![Create a Private Subnet](images/create-subnet-adb.png " ")
 
-    Then go with Create Subnet. 
+    ![Create a Private Subnet](images/create-subnet-adb2.png " ")
 
-
-
-
-
+    Then go with **Create Subnet**. 
 
 ### Summary
 
-This VCN will contain all of the other assets that you will create during this set of labs. In real-world situations, you would create multiple VCNs based on their need for access (which ports to open) and who can access them. Both of these concepts are covered in the next lab ***Create a Compute Service***.
+This VCN will contain all of the other assets that you will create during this set of labs. In real-world situations, you would create multiple VCNs based on their need for access (which ports to open) and who can access them.
+
+_Congratulations! You have successfully completed the lab._
 
 ## Acknowledgements
 
 - **Author** - Rajeshwari Rai, Prasenjit Sarkar 
 - **Contributors** - Oracle LiveLabs QA Team (Kamryn Vinson, QA Intern, Arabella Yao, Product Manager, DB Product Management)
-- **Last Updated By/Date** - Radu Chiru, May 2022
+- **Last Updated By/Date** - Radu Chiru, March 2023
+
+
 
