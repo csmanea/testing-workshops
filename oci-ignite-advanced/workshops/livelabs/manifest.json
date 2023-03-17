@@ -9,7 +9,7 @@
         {
             "title": "Get Started",
             "description": "Login to Oracle Cloud",
-            "filename": "../../../oci-ignite-advanced/cloud-login/cloud-login-livelabs-ignite.md"
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
             "title": "Ignite Basics: Manage Users, Groups, and Policies to Control Access",
@@ -38,7 +38,7 @@
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-            "filename": "../../../oci-ignite-advanced/need-help/need-help-livelabs.md"
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
         }
     ]
 }
