@@ -1,5 +1,4 @@
-<!-- Not tested -->
-# Deploying and configuring Autonomous Data Warehouse
+# Deploying and configuring an Autonomous Data Warehouse
 
 ## Introduction
 

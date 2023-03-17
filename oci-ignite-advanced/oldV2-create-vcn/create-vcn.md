@@ -67,8 +67,8 @@ To create a VCN on Oracle Cloud Infrastructure:
     |Compartment |  Choose the ***Workshop*** compartment
     |Target Type|NAT Gateway|
     |Destination CIDR Block|0.0.0.0/0|
-    |Compartment|Workshop|
-    |Target NAT Gateway| NAT Gateway-VCN-Workshop|
+    |Compartment|Demo|
+    |Target NAT Gateway| NAT Gateway-OCI_HOL_VCN|
 
     ![Configure the Route Table](images/create-rt1-adb.png " ")
 
@@ -79,8 +79,8 @@ To create a VCN on Oracle Cloud Infrastructure:
     |----------------------------------------|:------------:|
     | Target Type|Service Gateway|
     |Destination Service |  Choose "all ***Region_name*** services in Oracle Service Network"
-    |Compartment|Workshop|
-    |Target Service Gateway| Service Gateway-VCN-Workshop|
+    |Compartment|Demo|
+    |Target Service Gateway| Service Gateway-OCI_HOL_VCN|
 
     ![Configure the Route Table](images/create-rt2-adb.png " ")
 
@@ -92,16 +92,16 @@ To create a VCN on Oracle Cloud Infrastructure:
 ## Task 3: Create a Security List
 
 1. In the VCN , navigate to Security Lists menu, and click **Create Security List**.
-2. Complete the following fields 
+2. Complete the following fields:
 
 
     |                  **Field**              |    **Value**  |
     |----------------------------------------|:------------:|
-    | Name |SL_ADB|
+    | Name |SL_ADW|
     |Compartment |  Choose the ***Workshop*** compartment
     |Source CIDR Block|10.0.0.0/16|
     |IP Protocol|TCP
-    |Destination Port Range|ALL|
+    |Destination Port Range|1521|
 
       ![Configure the Security List](images/create-securitylist-ingress-adb.png " ")
 

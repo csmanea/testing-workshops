@@ -11,7 +11,7 @@ Estimated time: 5 minutes
 ### Objectives
 
 
-In this lab, you will:
+In this section, you will revise the Ignite knowledge:
 
 - Create a compartment
 - Create a user
@@ -24,7 +24,7 @@ In this lab, you will:
 Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create a basic environment for you to use on your tenancy.
 
 
-## Task 1: Create Compartments
+## Task 1: Create a Compartment
 
 A compartment is a collection of cloud assets, like compute instances, load balancers, databases, etc. By default, a root compartment was created for you when you created your tenancy (i.e. when you registered for the trial account). It is possible to create everything in the root compartment, but Oracle recommends that you create sub-compartments to help manage your resources more efficiently.
 
