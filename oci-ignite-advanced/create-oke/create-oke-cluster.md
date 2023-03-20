@@ -28,13 +28,30 @@ Estimated time: 20-25 min
 
   ![Click on Create Cluster](images/create-oke-cluster.png " ")
 
-3. Choose **Quick Create** as it will create the new cluster along with the new network resources such as Virtual Cloud Network (VCN), Internet Gateway (IG), NAT Gateway (NAT), Regional Subnet for worker nodes, and a Regional Subnet for load balancers. Select Launch Workflow
+3. Choose **Quick Create** as it will create the new cluster along with the new network resources such as Virtual Cloud Network (VCN), Internet Gateway (IG), NAT Gateway (NAT), Regional Subnet for worker nodes, and a Regional Subnet for load balancers. 
 
-  ![Click on Create Cluster](images/quick-cluster-oke.png " ")
+  Click on **Submit**.
 
-4. Then check that the policy has been created:
+  ![Quick create Kubernetes Cluster](images/quick-cluster-oke.png " ")
 
-  ![](./images/image58.png " ")
+4.  This brings up the __Create Cluster (quick)__ screen where you will specify the configuration of the cluster.
+
+ 
+5. Give basic information for the OKE cluster:
+
+    - __Choose a compartment__ - Choose the compartment **Workshop** created in __Ignite Basics__. See [the documentation](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingcompartments.htm) if you want to learn more about compartments.
+    - __Name__ - Enter a memorable name for the database for display purposes. For this lab, use __Ignite-Cluster__.
+    - __Kubernetes version__ - Leave the default option.    
+
+    ![Enter the required details.](images/configure-cluster-oke1.png " ")
+
+6. Choose the **Public Endpoint** in the Kubernetes API endpoint to easily access the kubectl, if you use a Bastion or an admin instance to access the kubectl commands, select the **Private Endpoint**.
+
+  Select **Managed** for the **Node type**, and **Private workers** for the **Kubernetes worker nodes**.
+
+*Optionally choose visibility of the Kubernetes Worker Nodes to Public Workers if you want public access to your nodes and number of nodes to 2 or 1 if you want reduced number of nodes*
+    ![Select the required details.](images/configure-cluster-oke2.png " ")
+
 
 ## Task 2: Create OKE Clusters
 
