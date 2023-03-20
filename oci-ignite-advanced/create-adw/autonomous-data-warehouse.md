@@ -16,11 +16,11 @@ In this lab, you will:
 -   Connect to it via SQL Developer
 ### Prerequisites
 
+* This lab requires completion of the **Get Started** section in the Contents menu on the left.
 * [Familiarity with OCI console](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/console.htm)
 * [Overview of Networking](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm)
 * [Oracle Cloud basics](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/concepts.htm)
 * [Connecting to a compute instance](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/accessinginstance.htm)
-* This lab requires completion of the Get Started section in the Contents menu on the left.
 * Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create a Level 100 environment for you to use on your tenancy.
 
 ## Task 1: Choose Autonomous Database from the Services Menu
@@ -85,9 +85,9 @@ In this lab, you will:
     - If you want to allow traffic from everywhere, select **Secure access from everywhere**.
     - If you want to allow traffic only from the IP addresses and VCNs you specify - where access to the database from all public IPs or VCNs is blocked, select **Secure access from allowed IPs and VCNs only** in the Choose network access area.
     - If you want to restrict access to a private endpoint within an OCI VCN, select **Private endpoint access only** in the Choose network access area.
-    - If the "Require mutual TLS (mTLS) authentication" option is selected, mTLS will be required to authenticate connections to your Autonomous Database. TLS connections allow you to connect to your Autonomous Database without a wallet, if you use a JDBC thin driver with JDK8 or above. See the [documentation for network options](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/support-tls-mtls-authentication.html#GUID-3F3F1FA4-DD7D-4211-A1D3-A74ED35C0AF5) for options to allow TLS, or to require only mutual TLS (mTLS) authentication.
+    - If the **Require mutual TLS (mTLS) authentication** option is selected, mTLS will be required to authenticate connections to your Autonomous Database. TLS connections allow you to connect to your Autonomous Database without a wallet, if you use a JDBC thin driver with JDK8 or above. See the [documentation for network options](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/support-tls-mtls-authentication.html#GUID-3F3F1FA4-DD7D-4211-A1D3-A74ED35C0AF5) for options to allow TLS, or to require only mutual TLS (mTLS) authentication.
 
-    - For this lab, select, **Secure access from allowed IPs and VCNs only**.
+    - For this lab, select, **Secure access from allowed IPs and VCNs only**. Then under __IP notation type__ choose **Virtual Cloud Network** and select the **VCN-Workshop** created in *Lab 1: Create a Virtual Cloud Network*. 
 
     ![Choose the network access type.](images/adb-network-access.png " ")
 
@@ -112,9 +112,15 @@ In this lab, you will:
 
 1. Click on **Edit** in the **Network** category, **Access control list** section:
 
-    ![Edit Access control list](images//modify-access-control-list-adb.png" ")
+    ![Edit Access control list](images/modify-access-control-list-adb.png " ")
 
-2. 
+2. Click on **Add access control rule**:
+
+    ![Add access control rule](images/adb-add-access-control-rule.png" ")
+
+3. Click on **Add my IP address**:
+
+    ![Add your IP address](images/adb-access-control-list-add-myip.png" ")
 
 
 
