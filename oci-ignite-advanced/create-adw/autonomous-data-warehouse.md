@@ -144,13 +144,13 @@ In this lab, you will:
 
 7. Configure the database connection:
 
-    - __Name__ - Enter the name *IGNITEADW* of the created database.
-    - __Add the credentials__ - Fill in the username *ADMIN* and password *Oracle123!!!* chosen when we provisioned the database (__*Task 2, Step 7*__)
-    - __Connection Type__ - For this lab, specify __Cloud Wallet__. Browse the location where you saved the *wallet.zip* in __*Step 5*__ and **select the .zip file**.
-    - __Storage (TB)__ - Select your storage capacity in terabytes. For this lab, specify __1 TB__ of storage. Or, if you choose an Always Free database, it comes with 20 GB of storage.
+    - __Name__ - Enter the name for this connection (i.e. *IGNITEADW*)
+    - __Add the credentials__ - Fill in the database username *ADMIN* and password *Oracle123!!!* chosen when we provisioned the database (__*Task 2, Step 7*__)
+    - __Connection Type__ - For this lab, specify __Cloud Wallet__ (if you are using SQL Developer 18.2, this is **Cloud PDB**). Browse the location where you saved the *wallet.zip* in __*Step 5*__ and **select the .zip file**.
+    - __Service__ - Enter the database TNS name. The client credentials file includes a *tnsnames.ora* file that provides database TNS names with corresponding services.
     - __Auto Scaling__ - For this lab, keep auto scaling enabled, to enable the system to automatically use up to three times more CPU and IO resources to meet workload demand.
     
-    > **Note:** You cannot scale up/down an Always Free autonomous database.
+    Click **Connect** to connect to the database.
 
     ![Configure the database connection parameters.](images/configure-connection-sqldeveloper.png " ")
 
