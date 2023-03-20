@@ -6,7 +6,7 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 
 The purpose of this lab is to get familiar with Oracle Autonomous Data Warehouse primitives. At the end of this lab, you will be familiar with launching an Autonomous Data Warehouse database, using secure network access control list and connect to the instance via SQL Developer tool.
 
-Estimated Time: 5 minutes
+Estimated Time: 35 minutes
 
 ### Objectives
 
@@ -140,6 +140,8 @@ In this lab, you will:
 Oracle SQL Developer is a free integrated development environment that simplifies the development and management of Autonomous Database.
 
 SQL Developer can connect to Autonomous Database and contains enhancements for key Autonomous Database features. You can download the latest version of Oracle SQL Developer for your platform from the Download link on this page: [Oracle SQL Developer](https://www.oracle.com/database/technologies/appdev/sql-developer.html).
+    ![Access SQL Developer](images/download-sqldeveloper.png " ")
+
 
 For connecting with mTLS authentication, Oracle SQL Developer provides support for wallet files using the Cloud Wallet Connection Type. Oracle recommends that you use version 18.2 (or later); however, earlier versions of SQL Developer will work with Autonomous Database using an Oracle Wallet.
 
