@@ -25,7 +25,7 @@
         },        
         {
             "title": "Lab 3 (Optional): Create a Kubernetes Cluster",
-            "filename": "./../../create-compute/create-compute.md"
+            "filename": "./../../create-oke/create-oke-cluster.md"
         },       
         {
             "title": "Need Help?",
