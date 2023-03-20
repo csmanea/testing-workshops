@@ -25,7 +25,7 @@ In this lab, you will:
 
 ## Task 1: Choose Autonomous Database from the Services Menu
 
-1. Log in to the Oracle Cloud Interface.
+1. Log in to the [Oracle Cloud Console](https://cloud.oracle.com/).
 2. Once you log in, you arrive at the cloud services dashboard where you can see all the services available to you. Click the navigation menu in the upper left to show top level navigation choices and then click **Autonomous Database**.
 
     ![Oracle home page.](images/navigate-adb.png " ")
@@ -167,14 +167,17 @@ To create a new mTLS connection to Autonomous Database, do the following:
 
     ![Configure the database connection parameters.](images/configure-connection-sqldeveloper.png " ")
 
-3. Click on the **"+"** next to the database connection *IGNITEADW* on the left side to expand the database content and start testing it.
+## Task 4: Run a Sample Query on the Autonomous Database instance via SQL Developer
+
+
+1. Click on the **"+"** next to the database connection *IGNITEADW* on the left side to expand the database content and start testing it.
 
     ![Connection succesful](images/connection-successful-sqldeveloper.png " ")
 
-4. **Copy** the following Query the Sample Sales History Data Set and **Paste** it in the SQL Developer worksheet:
+2. Click on the **Copy** button below to copy **Sample Sales History Data Set** Query and **Paste** it in the SQL Developer worksheet:
 
-```
-<copy>
+    ```
+    <copy>
 SELECT channel_desc, TO_CHAR(SUM(amount_sold),'9,999,999,999') SALES$,
    RANK() OVER (ORDER BY SUM(amount_sold)) AS default_rank,
    RANK() OVER (ORDER BY SUM(amount_sold) DESC NULLS LAST) AS custom_rank
@@ -185,11 +188,11 @@ WHERE sales.prod_id=products.prod_id AND sales.cust_id=customers.cust_id
   AND times.calendar_month_desc IN ('2000-09', '2000-10')
   AND country_iso_code='US'
 GROUP BY channel_desc;
-```
-Click the green **"Play"** button to run the statement.
+    ```
+3. Click the green **"Play"** button to run the statement.
 ![Paste the sample Query in the SQL worksheet and Run it](images/sample-query-sqldeveloper.png " ")
 
-5. Check the **Query Result** .
+4. Check the **Query Result** .
 
 ![Sample Query Result](images/sample-query-result-sqldeveloper.png " ")
 
