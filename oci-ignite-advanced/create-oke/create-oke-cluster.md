@@ -4,7 +4,7 @@
 
 In this lab you will create a Kubernetes Cluster to deploy the microservices you will create in a later lab.
 
-Estimated time: 20 - 25 min
+Estimated time: 20-25 min
 
 ### Objectives
 
@@ -18,25 +18,19 @@ Estimated time: 20 - 25 min
 * [Oracle Cloud basics](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/concepts.htm)
 * [Connecting to a compute instance](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/accessinginstance.htm)
 * Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create a Level 100 environment for you to use on your tenancy.
-## Task 1: Create Policies
+## Task 1: Create Kubernetes Cluster (OKE)
 
-1. Start by creating a policy that allows Service OKE to be created and manage all resources in this tenancy. To do this open the menu and go to Identity-\>Policies.
+1. To create an OKE cluster, open up the navigation menu in the top-left corner of the Console and go to **Developer Services** section, then click on **Kubernetes Clusters**.
 
-  ![](./images/image56.png " ")
+  ![Navigate to Kubernetes Cluster](images/navigate-oke.png " ")
 
-2. Check that the root compartment is selected. Then click **Create Policy** and fill in the name and description. Copy and paste the value below into the Policy Statements field:
+2. Check that the **Workshop** compartment is selected under **List Scope**. Then click **Create Cluster**:
 
-  ![](./images/image68.png " ")
+  ![Click on Create Cluster](images/create-oke-cluster.png " ")
 
-	```
-	<copy>
-    Allow service OKE to manage all-resources in tenancy
-    </copy>
-    ```
+3. Choose **Quick Create** as it will create the new cluster along with the new network resources such as Virtual Cloud Network (VCN), Internet Gateway (IG), NAT Gateway (NAT), Regional Subnet for worker nodes, and a Regional Subnet for load balancers. Select Launch Workflow
 
-3. And then click **Create**.
-
-  ![](./images/image57.png " ")
+  ![Click on Create Cluster](images/quick-cluster-oke.png " ")
 
 4. Then check that the policy has been created:
 
