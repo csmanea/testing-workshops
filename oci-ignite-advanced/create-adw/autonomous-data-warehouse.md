@@ -150,7 +150,7 @@ In this lab, you will:
     - __Service__ - Enter the database TNS name. The client credentials file includes a *tnsnames.ora* file that provides database TNS names with corresponding services.
     - __Auto Scaling__ - For this lab, keep auto scaling enabled, to enable the system to automatically use up to three times more CPU and IO resources to meet workload demand.
     
-    Click **Connect** to connect to the database.
+    Click **Test** to test the database connection. If *Status:Success* then click **Connect** to connect to the database.
 
     ![Configure the database connection parameters.](images/configure-connection-sqldeveloper.png " ")
 
