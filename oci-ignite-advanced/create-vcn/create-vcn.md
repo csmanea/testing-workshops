@@ -16,7 +16,7 @@ In this lab, you will:
 
 ### Prerequisites
 
--   This lab requires completion of the Get Started section in the Contents menu on the left.
+- This lab requires completion of the **Get Started** section in the Contents menu on the left.
 -   Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create a basic environment for you to use on your tenancy.
 
 

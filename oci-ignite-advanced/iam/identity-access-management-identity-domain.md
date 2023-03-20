@@ -21,7 +21,9 @@ In this section, you will revise the Ignite knowledge:
 
 ### Prerequisites
 
-Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create a basic environment for you to use on your tenancy.
+- This lab requires completion of the **Get Started** section in the Contents menu on the left.
+
+- Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create a basic environment for you to use on your tenancy.
 
 
 ## Task 1: Create a Compartment
