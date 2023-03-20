@@ -110,6 +110,9 @@ In this lab, you will:
     Provisioning an Autonomous Database instance.
 ## Task 3: Connect to the Autonomous Database instance via SQL Developer
 
+See [the documentation](https://docs.oracle.com/en-us/iaas/autonomous-database-shared/doc/connect-sql-dev182.html#GUID-14217939-3E8F-4782-BFF2-021199A908FD) if you want to learn more about connecting to Oracle SQL Developer.
+
+
 1. Click on **Edit** in the **Network** category, **Access control list** section:
 
     ![Edit Access control list](images/modify-access-control-list-adb.png " ")
@@ -153,7 +156,6 @@ In this lab, you will:
     Click **Test** to test the database connection. If *Status:Success* then click **Connect** to connect to the database.
 
     ![Configure the database connection parameters.](images/configure-connection-sqldeveloper.png " ")
-
 
 
 
