@@ -2,13 +2,14 @@
 
 ## Introduction
 
-In this lab you will create a Kubernetes Cluster to deploy the microservices you will create in a later lab.
+In this lab you will create a Kubernetes Cluster to deploy a **Hello World** application.
 
 Estimated time: 20-25 min
 
 ### Objectives
 
 * Learn how to create a Kubernetes Cluster
+* Deploy a sample Hello World app
 
 ### Prerequisites
 
@@ -20,7 +21,7 @@ Estimated time: 20-25 min
 * Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create a Level 100 environment for you to use on your tenancy.
 ## Task 1: Create Kubernetes Cluster (OKE)
 
-1. To create an OKE cluster, open up the navigation menu in the top-left corner of the Console and go to **Developer Services** section, then click on **Kubernetes Clusters**.
+1. To create an **OKE cluster**, open up the navigation menu in the top-left corner of the Console and go to **Developer Services** section, then click on **Kubernetes Clusters**.
 
   ![Navigate to Kubernetes Cluster](images/navigate-oke.png " ")
 
@@ -50,13 +51,14 @@ Estimated time: 20-25 min
   Select **Managed** for the **Node type**, and **Private workers** for the **Kubernetes worker nodes**.
 
 *Optionally choose visibility of the Kubernetes Worker Nodes to Public Workers if you want public access to your nodes and number of nodes to 2 or 1 if you want reduced number of nodes*
-    ![Select the required details.](images/configure-cluster-oke2.png " ")
+
+  ![Select the required details.](images/configure-cluster-oke2.png " ")
 
 7. Select *AMD Rome E3 Flex*, then select **1** as number of OCPUs, and **16 GB** as the amount of memory, and under **Node Count** select **3** as number of nodes. 
 
   Click **Next** at the bottom of the window.
 
-    ![Select shape and node count](images/shape-image-cluster-oke.png " ")
+  ![Select shape and node count](images/shape-image-cluster-oke.png " ")
 
 8. Review the resources to be created then click __Create cluster__.
 
@@ -65,7 +67,7 @@ Estimated time: 20-25 min
   On the next page, make sure all the components are checked then click **Close**.
  ![Click on Create Cluster](images/progress-create-cluster-oke.png " ")
 
- >Note: Cluster creation process can take a few minutes.
+ >**Note**: Cluster creation process can take a few minutes.
 
 9.  Your cluster will begin provisioning. In a few minutes, the state will turn from Provisioning to Available. At this point, your OKE cluster is ready to use! Have a look at your cluster's details here including its name, node pools, Kubernetes version, and metrics.
 
@@ -113,10 +115,10 @@ Estimated time: 20-25 min
 
     ```
     <copy> kubectl get services my-service
-        
+
     ```
 
- >Note: The *type=LoadBalancer* service is backed by external cloud providers, which is not covered in this example, please refer to this [page](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) for the details. 
+ >**Note:** The *type=LoadBalancer* service is backed by external cloud providers, which is not covered in this example, please refer to this [page](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) for the details. 
   If the external IP address is shown as *pending*, wait for a minute and enter the same command again.
 
 7. Use the **external IP address** (LoadBalancer Ingress) to access the **Hello World** application:

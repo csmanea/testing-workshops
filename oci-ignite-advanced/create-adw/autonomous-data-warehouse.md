@@ -64,7 +64,7 @@ In this lab, you will:
     - __Storage (TB)__ - Select your storage capacity in terabytes. For this lab, specify __1 TB__ of storage. Or, if you choose an Always Free database, it comes with 20 GB of storage.
     - __Auto Scaling__ - For this lab, keep auto scaling enabled, to enable the system to automatically use up to three times more CPU and IO resources to meet workload demand.
     
-    > **Note:** You cannot scale up/down an Always Free autonomous database.
+    >**Note:** You cannot scale up/down an Always Free autonomous database.
 
     ![Choose the remaining parameters.](images/configure-adb.png " ")
 

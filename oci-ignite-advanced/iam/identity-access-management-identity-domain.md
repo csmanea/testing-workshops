@@ -4,7 +4,7 @@
 
 Oracle Cloud Infrastructure (OCI) Identity and Access Management (IAM) Service lets you control who has access to your cloud resources. You control the types of access a group of users has and to which specific resources. Moreover, with the inclusion of Identity Domains, OCI IAM and Oracle IDCS were unified into a single cloud service.
 
-The purpose of this lab is to give you an overview of the IAM Service components with Identity domains and an example scenario to help you understand how they work together.
+The purpose of this section is to give you a recap of the content from the first Ignite session. You will encounter an overview of the IAM Service components with Identity domains and an example scenario to help you understand how they work together.
 
 Estimated time: 5 minutes
 
@@ -145,10 +145,11 @@ For IAM with Identity Domains, what was identified before as IAM users and group
    f) Click **Show manual editor** and enter the following **Statement**:
 
      ```
-     <copy>Allow group default/oci-group to manage all-resources in compartment Workshop</copy>
+     <copy> Allow group default/oci-group to manage all-resources in compartment Workshop</copy>
+
      ```
 
-     Note: If you do not include the *identity_domain_name* before the *group_name*, then the policy statement is evaluated as though the group belongs to the default identity domain.
+     >Note: If you do not include the *identity_domain_name* before the *group_name*, then the policy statement is evaluated as though the group belongs to the default identity domain.
 
    g) Click **Create**.
 
@@ -206,7 +207,8 @@ For IAM with Identity Domains, what was identified before as IAM users and group
 
 </if>
 
-_Congratulations! You have successfully completed the lab._
+Please *proceed to the next lab*.
+
 
 ## Acknowledgements
 
