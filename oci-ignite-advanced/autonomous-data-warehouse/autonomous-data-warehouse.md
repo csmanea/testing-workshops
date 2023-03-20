@@ -7,231 +7,123 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 
 ### Prerequisites
 
-* [OCI Training](https://cloud.oracle.com/en_US/iaas/training)
-* [Familiarity with OCI console](https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/console.htm)
+* Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create a Level 100 environment for you to use on your tenancy.
+* [Familiarity with OCI console](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/console.htm)
 * [Overview of Networking](https://docs.us-phoenix-1.oraclecloud.com/Content/Network/Concepts/overview.htm)
 * [Familiarity with Compartment](https://docs.us-phoenix-1.oraclecloud.com/Content/GSG/Concepts/concepts.htm)
 * [Connecting to a compute instance](https://docs.us-phoenix-1.oraclecloud.com/Content/Compute/Tasks/accessinginstance.htm)
 
+# Provision an Autonomous Database
 
-## Task 1: Sign in to OCI Console and create ADW instance
+## Introduction
 
-1. Sign in using your tenant name, user name and password. Use the login option under **Oracle Cloud Infrastructure**.
-    ![](./../grafana/images/Grafana_015.PNG " ")
+Deploy a complete data warehousing platform that scales to both your technical and analytic requirements.
 
+Estimated Time: 5 minutes
 
-2. From the OCI Services menu, Click **Autonomous Data Warehouse** under **Database** and then **Create Autonomous Database**.
-    ![](./../autonomous-data-warehouse/images/ADW_001.PNG " ")
+### Objectives
 
-3. Fill out the dialog box:
+In this lab, you will:
 
-      - COMPARTMENT: Choose your compartment
-      - DISPLAY NAME: Provide a name
-      - DATABASE NAME: Provide a name
-      - Choose a Workload type: Data Warehouse
-      - Choose a Deployment type: Shared Infrastructure
+-   Provision a new Autonomous Database
 
-      Under **Configure the database**
+### Prerequisites
 
-      - Always Free: Leave Default
-      - Choose database version: Leave Default
-      - OCPU count: 1
-      - Auto Scaling: Make sure flag is Un-checked
+-   This lab requires completion of the Get Started section in the Contents menu on the left.
 
-      Under **Create administrator credentials**
 
-      - Username: Provide a username
-      - Password: Provide a password (example Oracle123!!!!)
-      - Confirm Password: Confirm the password provided
+## Task 1: Choose Autonomous Database from the Services Menu
 
-      Under **Choose network access**
+1. Log in to the Oracle Cloud Interface.
+2. Once you log in, you arrive at the cloud services dashboard where you can see all the services available to you. Click the navigation menu in the upper left to show top level navigation choices and then click **Autonomous Database**.
 
-      - Allow secure access from anywhere: Make sure this option is checked
-      - Configure access control rules: Leave default (unchecked)
+    ![Oracle home page.](./images/navigation.png " ")
 
-      Under **Choose a license type**
+## Task 2: Create the Autonomous Database instance
 
-      - License Included: Check this option
+1. Click **Create Autonomous Database** to start the instance creation process.
 
-4. Click **Create Autonomous Database**.
+    ![Click Create Autonomous Database.](./images/create-adb-button.png " ")
 
-5. Click Autonomous Data Warehouse Database instance name that you created to bring up Database details page. Click **DB Connection**.
+2.  This brings up the __Create Autonomous Database__ screen where you will specify the configuration of the instance.
 
-6. In the pop up window Click **Download** under **Download Client Credentials (Wallet)**. Provide a password, Click **Download** and save the zip file (Note down zip file location).
+ 
+3. Give basic information for the autonomous database:
 
-    **HINT:** You can use the same password that was used to create the instance or choose a new password. Note down the password
+    - __Choose a compartment__ - You can simply use the default compartment or pick a different one. See [the documentation](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingcompartments.htm) if you want to learn more about compartments.
+    - __Display Name__ - Enter a memorable name for the database for display purposes. For this lab, use __My Quick Start ADB__.
+    - __Database Name__ - Use letters and numbers only, starting with a letter. Maximum length is 14 characters. (Underscores not initially supported.) For this lab, use __MYQUICKSTART__.
 
-    ![](./../autonomous-data-warehouse/images/ADW_004.PNG " ")
+    ![Enter the required details.](./images/create-adb-screen-freetier.png " ")
 
-We now have a Autonomous Data Warehouse instance created. We have also downloaded the Client Credentials file. We will use this file when connecting to the database instance  using SQL Developer. Next we will create a Data file and use Object stroage to upload it to Database instance.
 
-## Task 2: Create Auth token for the user connect to ADW and load data
+4. Choose __Data Warehouse__ workload type:
 
-In this section we will generate auth token for the user of this lab. An Auth token is an Oracle-generated token that you can use to authenticate with third-party APIs and Autonomous Database instance.
+    ![Choose a workload type.](./images/adb-workload-type.png " ")
 
-1. In OCI console Click the user icon (top right)  then **User settings**. Under Resources Click **Auth Token**, then **Generate Token**. In pop up window provide a description then Click **Generate Token**.
+5. Choose __Shared Infrastructure__ deployment type:
 
-    ![](./../autonomous-data-warehouse/images/ADW_005.PNG " ")
-    ![](./../autonomous-data-warehouse/images/ADW_006.PNG " ")
+    ![Choose a deployment type.](./images/adb-deployment-type.png " ")
 
-2.  Click **Copy** and save the token in Notepad.**Do not close the window without saving the token as it can not be retrieved later**.
-    ![](./../autonomous-data-warehouse/images/ADW_007.PNG " ")
+6. Configure the database:
 
-3. Note down your user name.
+    - __Always Free__ - If your Cloud Account is an Always Free account, you can select this option to create an always free autonomous database. An always free database comes with 1 CPU and 20 GB of storage. For this lab, we recommend you leave Always Free unchecked.
+    - __Choose database version__ - Select 19c as the database version.
+    - __OCPU count__ - Number of CPUs for your service. For this lab, specify __1 CPUs__. If you choose an Always Free database, it comes with 1 CPU.
+    - __Storage (TB)__ - Select your storage capacity in terabytes. For this lab, specify __1 TB__ of storage. Or, if you choose an Always Free database, it comes with 20 GB of storage.
+    - __Auto Scaling__ - For this lab, keep auto scaling enabled, to enable the system to automatically use up to three times more CPU and IO resources to meet workload demand.
+    - __New Database Preview__ - If a checkbox is available to preview a new database version, do NOT select it.
 
-    **Next we will connect to this ADW instance using SQL developer.**
+    > **Note:** You cannot scale up/down an Always Free autonomous database.
 
-    **Screen shots for SQL developer are from 18.1.0 version**
+    ![Choose the remaining parameters.](./images/adb-configure.png " ")
 
-4. Launch SQL devleoper using Apps icon and Click **+** to create a new connection
+7. Create administrator credentials:
 
-    ![](./../autonomous-data-warehouse/images/ADW_008.PNG " ")
-    ![](./../autonomous-data-warehouse/images/ADW_009.PNG " ")
+    - __Password and Confirm Password__ - Specify the password for ADMIN user of the service instance. The password must meet the following requirements:
+    - The password must be between 12 and 30 characters long and must include at least one uppercase letter, one lowercase letter, and one numeric character.
+    - The password cannot contain the username.
+    - The password cannot contain the double quote (") character.
+    - The password must be different from the last 4 passwords used.
+    - The password must not be the same password that you set less than 24 hours ago.
+    - Re-enter the password to confirm it. Make a note of this password.
 
-5. Fill out the diaog box:
+    ![Enter password and confirm password.](./images/admin-credential.png " ")
 
+8. Choose network access:
+    - For this lab, accept the default, "Secure access from everywhere."
+    - If you want to allow traffic only from the IP addresses and VCNs you specify - where access to the database from all public IPs or VCNs is blocked, select "Secure access from allowed IPs and VCNs only" in the Choose network access area.
+    - If you want to restrict access to a private endpoint within an OCI VCN, select "Private endpoint access only" in the Choose network access area.
+    - If the "Require mutual TLS (mTLS) authentication" option is selected, mTLS will be required to authenticate connections to your Autonomous Database. TLS connections allow you to connect to your Autonomous Database without a wallet, if you use a JDBC thin driver with JDK8 or above. See the [documentation for network options](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/support-tls-mtls-authentication.html#GUID-3F3F1FA4-DD7D-4211-A1D3-A74ED35C0AF5) for options to allow TLS, or to require only mutual TLS (mTLS) authentication.
 
-      - Connection Name: Provide a name
-      - Username: admin
-      - Password: Password used at ADW instance creation
-      - Save Password: Check the flag
-      - Connection Type: Cloud PDB
-      - Configuration file: File that was downloaded from ADW service console (Client credentials zip file)
-      - Keystore password: Password you provided when downloading the client credentials file
+    ![Choose the network access type.](./images/Picture100-26e.png " ")
 
-      **NOTE:** If using SQL developer 18.2.0 or higher this field is not available and not required
 
+9. Choose a license type. <if type="freetier">For this lab, choose __License Included__.</if><if type="livelabs">For this lab, choose __Bring Your Own License (BYOL)__.</if> The two license types are:
+    - __Bring Your Own License (BYOL)__ - Select this type when your organization has existing database licenses.
+    - __License Included__ - Select this type when you want to subscribe to new database software licenses and the database cloud service.
 
-      - Service: YOUR\_ADW\_INSTANCE\_NAME\_medium
-      - Click **Save**
-      - Click **Connect** and verify Successful connection
+    ![](./images/license.png " ")
 
-    ![](./../autonomous-data-warehouse/images/ADW_010.PNG " ")
 
-6. Create a new user called ocitest and grant the DWROLE to ocitest user. . Also grant this user table space quota to upload the data later on. Enter commands:
-    ```
-    <copy>
-    create user ocitest identified by P#ssw0rd12##;
-    </copy>
-    ```
+10. For this lab, do not provide a contact email address. The "Contact Email" field allows you to list contacts to receive operational notices and announcements as well as unplanned maintenance notifications.
 
-    ```
-    <copy>
-    Grant dwrole to ocitest;
-    </copy>
-    ```
+11. Click __Create Autonomous Database__.
 
-    ```
-    <copy>
-    Grant UNLIMITED TABLESPACE TO ocitest;
-    </copy>
-    ```
+12.  Your instance will begin provisioning. In a few minutes, the state will turn from Provisioning to Available. At this point, your Autonomous Database is ready to use! Have a look at your instance's details here including its name, database version, OCPU count, and storage size.
 
-7. Verify the user was created
+    ![Database instance homepage.](./images/adb-provisioning.png " ")
+    Provisioning an Autonomous Database instance.
 
-    ![](./../autonomous-data-warehouse/images/ADW_011.PNG " ")
+    ![Database instance homepage.](./images/adb-provisioned.png " ")
+    Autonomous Database sucessfully provisioned.
 
-8. Create another connection in SQL Developer (same steps as above), use following values:
+Please *proceed to the next lab*.
 
+## Learn more
 
-      - Connection Name: Provide a name
-      - Username: OCITEST
-      - Password:  P#ssw0rd12##
-      - Save Password: Check the flag
-      - Connection Type: Cloud PDB
-      - Configuration file: File that was downloaded from ADW service console (Client credentials zip file)
-      - Keystore password: Password you provided when downloading the client credentials file (NOTE: If using SQL developer 18.2.0 or higher this field is not available and not required)
-      - Service: YOUR\_ADW\_INSTANCE\_NAME\_medium
-      - Click **Save**
-      - Click **Connect** and verify Successful connection
+See the [documentation](https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/autonomous-workflow.html#GUID-5780368D-6D40-475C-8DEB-DBA14BA675C3) on the typical workflow for using Autonomous Data Warehouse.
 
-    ![](./../autonomous-data-warehouse/images/ADW_012.PNG " ")
-
-9. We will now download a text file from OCI Object storage. This file has commands that will be used to upload data into ADW and retrieve it. Open a new browser tab and copy/paste or Enter URL;
-
-    **https://objectstorage.us-ashburn-1.oraclecloud.com/n/us_training/b/Lab-images/o/ADW-File.txt**
-
-    **NOTE:** No spaces in URL
-
-10. Using OCITEST user store your Object Storage credentials. From the ADW-File.txt content copy and paste the commands under  
-/**** Set Definitions ****/ section. The commands will look like below
-
-    **Begin**
-
-    **DBMS\_CLOUD.create\_credential (**
-
-    **credential\_name => 'OCI\_CRED\_NAME',**
-
-    **username => 'YOUR\_USER\_NAME',**
-
-    **password => 'AUTH\_TOKEN'**
-
-    **) ;**
-
-    **end;**
-
-    **NOTE:** user name should be your user name and password should be the Auth Token generated earlier.
-
-11. Verify **PL/SQL Procedure successfully completed** message is displayed.
-
-    ![](./../autonomous-data-warehouse/images/ADW_013.PNG " ")
-
-12. Create a new table (We will load data from file in Object Storage to this table). From the ADW-File.txt content copy and paste the commands undrer /**** Create Table ****/ section. The commands will look like below
-
-    **CREATE TABLE CHANNELS (**
-
-    **NAME VARCHAR2(20) NOT NULL ,**
-
-    **gender VARCHAR2(20) NOT NULL ,**
-
-    **NAME_total NUMBER NOT NULL );**
-
-13. Verify **Table CHANNELS created** message
-
-    ![](./../autonomous-data-warehouse/images/ADW_014.PNG " ")
-
-14. Load data from file in Object Storage to newly created table.
-
-    **NOTE:** A data file with 1000s of records exists in OCI Object storage and we will use this file records to populate ADW From the ADW-File.txt content copy and paste the commands under  /**** DBMS ****/ section. The commands will look like below
-
-    **begin**
-
-    **dbms\_cloud.copy\_data(**
-
-    **table\_name =>'CHANNELS',**
-
-    **credential\_name =>'OCI\_CRED\_NAME',**
-
-    **file\_uri\_list =>'https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/us\_training/Lab-images/century\_names\_new.txt',format => json_object('delimiter' value ',', 'trimspaces' value 'lrtrim')**
-
-    **);**
-
-    **end;**
-
-15. Verify **PL/SQL Procedure successfully completed** message
-
-    ![](./../autonomous-data-warehouse/images/ADW_015.PNG " ")
-
-16. We will now query the table and verify the data Enter command:
-    ```
-    <copy>
-    select * from channels;
-    </copy>
-    ```
-
-    ![](./../autonomous-data-warehouse/images/ADW_016.PNG " ")
-
-We have successfully deployed a Autonomous Data Warehouse instance, populated a table using a file stored in Object storage and successfully run a query against the table.
-
-## Task 3: Delete the resources
-
-Delete Auth Token and Autonomous Data Warehouse
-
-1. Navigate to User Settings ,Click **Auth Token** and Click **Delete** for your Auth Token by Hovering your mouse over action icon (Three Dots).
-    ![](./../autonomous-data-warehouse/images/ADW_017.PNG " ")
-
-2. Navigate to Autonomous Data Warehouse menu, Hover over the action icon(Three dots) and Click **Terminate**.
-    ![](./../autonomous-data-warehouse/images/ADW_018.PNG " ")
 
 ## Acknowledgements
 *Congratulations! You have successfully completed the lab.*

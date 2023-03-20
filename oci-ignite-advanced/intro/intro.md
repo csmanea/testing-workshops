@@ -1,8 +1,8 @@
 # Introduction
 
-The labs in this workshop cover an introduction to **Oracle Cloud Infrastructure (OCI) Core Services**, including Virtual Cloud Networks (VCN), Compute, and Storage services. These labs also provide some of the foundational skills and knowledge you will need to attempt the [Oracle Cloud Infrastructure Foundations Certification](https://learn.oracle.com/ols/learning-path/become-an-oci-foundation-associate/35644/98057) offered by Oracle University.
+The labs in this workshop cover a level 100 set of skills for **Oracle Cloud Infrastructure (OCI) Core Services**, including Virtual Cloud Networks (VCN), Autonomous Database, Oracle Kubernetes Engine (OKE). These labs also provide some of the foundational skills and knowledge you will need to attempt the [Oracle Cloud Infrastructure Architect Associate Certification](https://education.oracle.com/oracle-cloud-infrastructure-2022-architect-associate/pexam_1Z0-1072-22) offered by Oracle University.
 
-The Oracle Cloud Infrastructure Foundations Certification provides candidates with foundational knowledge of core cloud computing concepts and an understanding of those services in Oracle Cloud Infrastructure. The certification is intended for candidates with technical and non-technical backgrounds who want to validate their understanding of Oracle Cloud Infrastructure.
+The Oracle Cloud Infrastructure Architect Associate exam is designed for individuals who possess a strong foundational knowledge of architecting infrastructure using Oracle Cloud Infrastructure (OCI) services. The certification is intended for candidates with technical backgrounds who want to validate their understanding of Oracle Cloud Infrastructure.
 
 The labs featured on this page cover various solutions, skill levels, and categories based on Oracle Cloud Infrastructure (OCI).
 
@@ -11,7 +11,7 @@ Estimated Workshop Time: 1 hour and 30 minutes
 ### Objectives
 In this workshop, you will:
 - Get introduced to the regions available on Oracle Cloud
-- Understand and create Identity and Access Management
+- Apply the Ignite Basics knowledge
 - Create a Virtual Cloud Network
 - Create an Autonomous Database
 
@@ -19,9 +19,6 @@ In this workshop, you will:
  - Create a Kubernetes Cluster
 ### Prerequisites
 Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create a Level 100 environment for you to use on your tenancy.
-
-Ignite Part 1 Knowledge - TBD
-
 
 
 ## About Oracle Cloud Infrastructure

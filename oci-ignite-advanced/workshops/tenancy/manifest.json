@@ -26,15 +26,7 @@
         {
             "title": "Lab 3 (Optional): Create a Kubernetes Cluster",
             "filename": "./../../create-compute/create-compute.md"
-        },    
-        {
-            "title": "Lab 2: Create an Autonomous Database",
-            "filename": "./../../autonomous-data-warehouse/autonomous-data-warehouse.md"
-        },
-        {
-            "title": "Lab 5 (Optional): TBD",
-            "filename": "./../../create-object-storage/object-storage/object-storage.md"
-        },
+        },       
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
