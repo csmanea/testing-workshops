@@ -4,12 +4,17 @@ The labs in this workshop cover a level 100 set of skills for **Oracle Cloud Inf
 
 The Oracle Cloud Infrastructure Architect Associate exam is designed for individuals who possess a strong foundational knowledge of architecting infrastructure using Oracle Cloud Infrastructure (OCI) services. The certification is intended for candidates with technical backgrounds who want to validate their understanding of Oracle Cloud Infrastructure.
 
-The labs featured on this page cover various solutions, skill levels, and categories based on Oracle Cloud Infrastructure (OCI).
+The labs featured on this page cover various solutions, skill levels, and categories based on Oracle Cloud Infrastructure (OCI). 
+
+Deploy a complete data warehousing platform that scales to both your technical and analytic requirements.
+
 
 Estimated Workshop Time: 1 hour and 30 minutes
 
 ### Objectives
+
 In this workshop, you will:
+
 - Get introduced to the regions available on Oracle Cloud
 - Apply the Ignite Basics knowledge
 - Create a Virtual Cloud Network

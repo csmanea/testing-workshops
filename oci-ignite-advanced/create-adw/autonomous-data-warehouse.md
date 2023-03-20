@@ -4,21 +4,6 @@
 
 Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous database that scales elastically, delivers fast query performance and requires no database administration. In this hands on lab, we will walk through deploying an Autonomous Data Warehouse database and loading a table using a text file that is stored in object storage. The purpose of this lab is to get familiar with Oracle Autonomous Data Warehouse primitives. At the end of this lab, you will be familiar with launching an Autonomous Data Warehouse database, creating an object storage bucket and loading a table using a text file stored in object storage
 
-### Prerequisites
-
-* [Familiarity with OCI console](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/console.htm)
-* [Overview of Networking](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm)
-* [Oracle Cloud basics](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/concepts.htm)
-* [Connecting to a compute instance](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/accessinginstance.htm)
-* Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create a Level 100 environment for you to use on your tenancy.
-
-
-# Provision an Autonomous Database
-
-## Introduction
-
-Deploy a complete data warehousing platform that scales to both your technical and analytic requirements.
-
 Estimated Time: 5 minutes
 
 ### Objectives
@@ -26,12 +11,15 @@ Estimated Time: 5 minutes
 In this lab, you will:
 
 -   Provision a new Autonomous Database
--   Connect via SQL Developer
-
+-   Connect to it via SQL Developer
 ### Prerequisites
 
--   This lab requires completion of the Get Started section in the Contents menu on the left.
-
+* [Familiarity with OCI console](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/console.htm)
+* [Overview of Networking](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm)
+* [Oracle Cloud basics](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/concepts.htm)
+* [Connecting to a compute instance](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/accessinginstance.htm)
+* This lab requires completion of the Get Started section in the Contents menu on the left.
+* Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create a Level 100 environment for you to use on your tenancy.
 
 ## Task 1: Choose Autonomous Database from the Services Menu
 
@@ -91,10 +79,13 @@ In this lab, you will:
     ![Enter password and confirm password.](images/adb-admin-credential.png " ")
 
 8. Choose network access:
-    - For this lab, accept the default, "Secure access from everywhere."
-    - If you want to allow traffic only from the IP addresses and VCNs you specify - where access to the database from all public IPs or VCNs is blocked, select "Secure access from allowed IPs and VCNs only" in the Choose network access area.
-    - If you want to restrict access to a private endpoint within an OCI VCN, select "Private endpoint access only" in the Choose network access area.
+    
+    - If you want to allow traffic from everywhere, select **Secure access from everywhere**.
+    - If you want to allow traffic only from the IP addresses and VCNs you specify - where access to the database from all public IPs or VCNs is blocked, select **Secure access from allowed IPs and VCNs only** in the Choose network access area.
+    - If you want to restrict access to a private endpoint within an OCI VCN, select **Private endpoint access only** in the Choose network access area.
     - If the "Require mutual TLS (mTLS) authentication" option is selected, mTLS will be required to authenticate connections to your Autonomous Database. TLS connections allow you to connect to your Autonomous Database without a wallet, if you use a JDBC thin driver with JDK8 or above. See the [documentation for network options](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/support-tls-mtls-authentication.html#GUID-3F3F1FA4-DD7D-4211-A1D3-A74ED35C0AF5) for options to allow TLS, or to require only mutual TLS (mTLS) authentication.
+
+    - For this lab, select, **Secure access from allowed IPs and VCNs only**.
 
     ![Choose the network access type.](images/adb-network-access.png " ")
 
@@ -113,11 +104,17 @@ In this lab, you will:
 
 12.  Your instance will begin provisioning. In a few minutes, the state will turn from Provisioning to Available. At this point, your Autonomous Database is ready to use! Have a look at your instance's details here including its name, database version, OCPU count, and storage size.
 
-    ![Database instance homepage.](./images/adb-provisioning.png " ")
+    ![Database instance homepage.](images/adb-state.png " ")
     Provisioning an Autonomous Database instance.
+## Task 3: Connect to the Autonomous Database instance via SQL Developer
 
-    ![Database instance homepage.](./images/adb-provisioned.png " ")
-    Autonomous Database sucessfully provisioned.
+1. Click on **Edit** in the **Network** category, **Access control list** section:
+
+    ![Edit Access control list](images//modify-access-control-list-adb.png" ")
+
+2. 
+
+
 
 Please *proceed to the next lab*.
 

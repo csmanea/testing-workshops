@@ -10,6 +10,7 @@ Estimated Time: 15 minutes
 
 
 ### Objectives
+
 In this lab, you will:
 - Create a virtual cloud network configured for a database use case.
 
