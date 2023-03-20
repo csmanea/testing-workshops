@@ -45,7 +45,7 @@ Estimated time: 20-25 min
 
     ![Enter the required details.](images/configure-cluster-oke1.png " ")
 
-6. Choose the **Public Endpoint** in the Kubernetes API endpoint to easily access the kubectl, if you use a Bastion or an admin instance to access the kubectl commands, select the **Private Endpoint**.
+6. Choose the **Public Endpoint** in the Kubernetes API endpoint to easily access the kubectl. *If you use a Bastion or an admin instance to access the kubectl commands, select the **Private Endpoint**.*
 
   Select **Managed** for the **Node type**, and **Private workers** for the **Kubernetes worker nodes**.
 
@@ -53,53 +53,42 @@ Estimated time: 20-25 min
     ![Select the required details.](images/configure-cluster-oke2.png " ")
 
 
-## Task 2: Create OKE Clusters
+## Task 2: Acccess the OKE Cluster
 
 1. In the OCI Dashboard Menu go to: Developer Services-\> Container Clusters (OKE).
 
-  ![](./images/image59.png " ")
 
 2. Select the compartment you created in lab 2 under List Scope and click **Create Cluster**.
 
-  ![](./images/image60.png " ")
 
 3. Provide a name for the cluster, then select the QUICK CREATE option and click the **Launch Workflow** button.
 
-  ![](./images/image300.png " ")
 
 4. Select VM.Standard2.1 for SHAPE and 3 (or less if you don't want to create a 3 workernodes nodepool) for the NUMBER OF NODES (this number is the VMs that will be created into the node pool). Then click **NEXT**. Leave the rest of the parameters as defaults.
 
-  ![](./images/image301.png " ")
 
 5. Review the cluster information before to create it, and click **Create Cluster** or back to modify cluster options.
 
-  ![](./images/image302.png " ")
 
 6. The previous QUICK CREATE Option will setup a 3 nodes Kubernetes Cluster with predefined Virtual Cloud Network, 3 Subnets, Security Lists, Route tables. When you are done with checks, please click **Close**.
 
-  *Note: Cluster creation process can take several minutes.*
+  *Note: Cluster creation process can take a few minutes.*
 
-  ![](./images/image303.png " ")
 
-  ![](./images/image64.png " ")
 
 7. Then you are taken to the Cluster Information page. Please copy Cluster id and don’t forget to make a note in a txt file as you will need this data later.
 
-  ![](./images/image65.png " ")
 
 8. It will take several minutes for the cluster to be created and you may need to refresh the page. Once created, you can scroll down and select **Node Pools** under the Resources area, you can check that a node pool with three node clusters has been created.
 
-  ![](./images/image66.png " ")
 
   *Note: you may find that Compute nodes have not been created yet as. This process can take several minutes as compute instances have to be created and then started:*
 
-  ![](./images/image67.png " ")
 
 9. Now your Kubernetes Cluster is created. But we need to run some extra steps to get started with managing the Kubernetes Cluster.
 
   Click **Quick Start** under the Resources area. This section explains the steps to access your Cluster dashboard by using Kubectl. It is also explains how to install OCIcli and kubectl to access to Kubernetes management tool:
 
-  ![](./images/image310.png " ")
 
   You can proceed to the next lab.
 
