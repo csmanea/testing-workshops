@@ -167,7 +167,27 @@ To create a new mTLS connection to Autonomous Database, do the following:
 
     ![Configure the database connection parameters.](images/configure-connection-sqldeveloper.png " ")
 
+3. Click on the **"+"** next to the database connection *IGNITEADW* on the left side to expand the database content and start testing it.
 
+    ![Connection succesful](images/connection-successful-sqldeveloper.png" ")
+
+4. **Copy** the following Query the Sample Sales History Data Set and **Paste** it in the SQL Developer worksheet:
+
+```
+<copy>
+SELECT channel_desc, TO_CHAR(SUM(amount_sold),'9,999,999,999') SALES$,
+   RANK() OVER (ORDER BY SUM(amount_sold)) AS default_rank,
+   RANK() OVER (ORDER BY SUM(amount_sold) DESC NULLS LAST) AS custom_rank
+FROM sh.sales, sh.products, sh.customers, sh.times, sh.channels, sh.countries
+WHERE sales.prod_id=products.prod_id AND sales.cust_id=customers.cust_id
+  AND customers.country_id = countries.country_id AND sales.time_id=times.time_id
+  AND sales.channel_id=channels.channel_id
+  AND times.calendar_month_desc IN ('2000-09', '2000-10')
+  AND country_iso_code='US'
+GROUP BY channel_desc;
+```
+Click the green **"Play"** button to run the statement.
+![Paste the sample Query in the SQL worksheet and Run it](images/sample-query-sqldeveloper.png " ")
 
     
 
@@ -185,5 +205,5 @@ See the [documentation](https://docs.oracle.com/en/cloud/paas/autonomous-data-wa
 *Congratulations! You have successfully completed the lab.*
 
 - **Author** - Cristian Manea
-- **Last Updated By/Date** - Cristian Manea, February 2022
+- **Last Updated By/Date** - Cristian Manea, March 2023
 
