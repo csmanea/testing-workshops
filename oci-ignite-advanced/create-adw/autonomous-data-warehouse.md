@@ -107,45 +107,55 @@ In this lab, you will:
 12.  Your instance will begin provisioning. In a few minutes, the state will turn from Provisioning to Available. At this point, your Autonomous Database is ready to use! Have a look at your instance's details here including its name, database version, OCPU count, and storage size.
 
     ![Database instance homepage.](images/adb-state.png " ")
-    Provisioning an Autonomous Database instance.
-## Task 3: Connect to the Autonomous Database instance via SQL Developer
 
-See [the documentation](https://docs.oracle.com/en-us/iaas/autonomous-database-shared/doc/connect-sql-dev182.html#GUID-14217939-3E8F-4782-BFF2-021199A908FD) if you want to learn more about connecting to Oracle SQL Developer.
-
-
-1. Click on **Edit** in the **Network** category, **Access control list** section:
+13. After instance is provisioned (state changes from **Provisioning** to **Available**), click on **Edit** in the **Network** category, **Access control list** section:
 
     ![Edit Access control list](images/modify-access-control-list-adb.png " ")
 
-2. Click on **Add access control rule**:
+14. Click on **Add access control rule**:
 
     ![Add access control rule](images/adb-add-access-control-rule.png " ")
 
-3. Click on **Add my IP address** and click **Save** on the bottom of the window:
+15. Click on **Add my IP address** and click **Save** on the bottom of the window:
 
     ![Add your IP address](images/adb-access-control-list-add-myip.png " ")
 
-4. Click on **Database connection**:
+16. Click on **Database connection**:
 
     ![Access Database connection options](images/adb-database-connection.png " ")
 
-4. Under **Wallet type**, choose **Instance Wallet** and  click on **Download wallet**. 
+17. Under **Wallet type**, choose **Instance Wallet** and  click on **Download wallet**. 
 
     ![Download client credentials (Wallet)](images/adb-database-connection-download-wallet.png " ")
 
-5. Please create a **password** for this wallet. Some database clients will require that you provide both the wallet and password to connect to your database (other clients will auto-login using the wallet without a password).
+18. Please create a **password** for this wallet. Some database clients will require that you provide both the wallet and password to connect to your database (other clients will auto-login using the wallet without a password).
 
     ![Choose a password for Wallet](images/adb-download-wallet-password.png " ")
 
     Choose a location to save the *wallet.zip* file.
 
     Click the **Close** button at the bottom of the screen.
+## Task 3: Connect to the Autonomous Database instance via SQL Developer
 
-6. Open SQL Developer tool, and click on the **green cross** to add a new/select database connection:
+Oracle SQL Developer is a free integrated development environment that simplifies the development and management of Autonomous Database.
+
+SQL Developer can connect to Autonomous Database and contains enhancements for key Autonomous Database features. You can download the latest version of Oracle SQL Developer for your platform from the Download link on this page: [Oracle SQL Developer](https://www.oracle.com/database/technologies/appdev/sql-developer.html).
+
+For connecting with mTLS authentication, Oracle SQL Developer provides support for wallet files using the Cloud Wallet Connection Type. Oracle recommends that you use version 18.2 (or later); however, earlier versions of SQL Developer will work with Autonomous Database using an Oracle Wallet.
+
+For connecting with TLS authentication, Oracle SQL Developer provides support using the Custom JDBC Connection Type. See Connect with Oracle SQL Developer with TLS Authentication for details on connecting using TLS authentication.
+
+To create a new mTLS connection to Autonomous Database, do the following:
+
+
+1. Open SQL Developer tool, and click on the **green cross** to add a new/select database connection:
 
     ![Add a new connection in SQL Developer](images/new-connection-sqldeveloper.png " ")
 
-7. Configure the database connection:
+    See [the documentation](https://docs.oracle.com/en-us/iaas/autonomous-database-shared/doc/connect-sql-dev182.html#GUID-14217939-3E8F-4782-BFF2-021199A908FD) if you want to learn more about connecting to Oracle SQL Developer.
+
+
+2. Configure the database connection:
 
     - __Name__ - Enter the name for this connection (i.e. *IGNITEADW*)
     - __Add the credentials__ - Fill in the database username *ADMIN* and password *Oracle123!!!* chosen when we provisioned the database (__*Task 2, Step 7*__)
