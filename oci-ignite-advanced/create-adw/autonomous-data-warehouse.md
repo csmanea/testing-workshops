@@ -6,7 +6,7 @@ Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous
 
 The purpose of this lab is to get familiar with Oracle Autonomous Data Warehouse primitives. At the end of this lab, you will be familiar with launching an Autonomous Data Warehouse database, using secure network access control list and connect to the instance via SQL Developer tool.
 
-Estimated Time: 35 minutes
+Estimated Time: 55 minutes
 
 ### Objectives
 

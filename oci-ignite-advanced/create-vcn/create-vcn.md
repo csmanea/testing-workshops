@@ -6,7 +6,7 @@ Oracle Cloud Infrastructure (OCI) Compute lets you create multiple Virtual Cloud
 
 Be sure to review [Overview of Networking](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm) to gain a full understanding of the network components and their relationships.
 
-Estimated Time: 15 minutes
+Estimated Time: 25 minutes
 
 
 ### Objectives
