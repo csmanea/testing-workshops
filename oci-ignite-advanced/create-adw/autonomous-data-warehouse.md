@@ -60,11 +60,11 @@ In this lab, you will:
 
 4. Choose __Data Warehouse__ workload type:
 
-    ![Choose a workload type.](images/choose-workload-type.png " ")
+    ![Choose a workload type.](images/choose-adb-workload-type.png " ")
 
 5. Choose __Shared Infrastructure__ deployment type:
 
-    ![Choose a deployment type.](images/-choose-adb-deployment-type.png " ")
+    ![Choose a deployment type.](images/choose-adb-deployment-type.png " ")
 
 6. Configure the database:
 
@@ -73,11 +73,10 @@ In this lab, you will:
     - __OCPU count__ - Number of CPUs for your service. For this lab, specify __1 CPUs__. If you choose an Always Free database, it comes with 1 CPU.
     - __Storage (TB)__ - Select your storage capacity in terabytes. For this lab, specify __1 TB__ of storage. Or, if you choose an Always Free database, it comes with 20 GB of storage.
     - __Auto Scaling__ - For this lab, keep auto scaling enabled, to enable the system to automatically use up to three times more CPU and IO resources to meet workload demand.
-    - __New Database Preview__ - If a checkbox is available to preview a new database version, do NOT select it.
-
+    
     > **Note:** You cannot scale up/down an Always Free autonomous database.
 
-    ![Choose the remaining parameters.](./images/adb-configure.png " ")
+    ![Choose the remaining parameters.](images/configure-adb.png " ")
 
 7. Create administrator credentials:
 
@@ -89,7 +88,7 @@ In this lab, you will:
     - The password must not be the same password that you set less than 24 hours ago.
     - Re-enter the password to confirm it. Make a note of this password.
 
-    ![Enter password and confirm password.](./images/admin-credential.png " ")
+    ![Enter password and confirm password.](images/adb-admin-credential.png " ")
 
 8. Choose network access:
     - For this lab, accept the default, "Secure access from everywhere."
@@ -97,19 +96,20 @@ In this lab, you will:
     - If you want to restrict access to a private endpoint within an OCI VCN, select "Private endpoint access only" in the Choose network access area.
     - If the "Require mutual TLS (mTLS) authentication" option is selected, mTLS will be required to authenticate connections to your Autonomous Database. TLS connections allow you to connect to your Autonomous Database without a wallet, if you use a JDBC thin driver with JDK8 or above. See the [documentation for network options](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/support-tls-mtls-authentication.html#GUID-3F3F1FA4-DD7D-4211-A1D3-A74ED35C0AF5) for options to allow TLS, or to require only mutual TLS (mTLS) authentication.
 
-    ![Choose the network access type.](./images/Picture100-26e.png " ")
+    ![Choose the network access type.](images/adb-network-access.png " ")
 
 
 9. Choose a license type. For this lab, choose __License Included__. The two license types are:
     - __Bring Your Own License (BYOL)__ - Select this type when your organization has existing database licenses.
     - __License Included__ - Select this type when you want to subscribe to new database software licenses and the database cloud service.
 
-    ![](./images/license.png " ")
-
+    ![Choose license type](images/adb-license-type.png" ")
 
 10. For this lab, do not provide a contact email address. The "Contact Email" field allows you to list contacts to receive operational notices and announcements as well as unplanned maintenance notifications.
 
 11. Click __Create Autonomous Database__.
+
+ ![Click on Create Autonomous Database](images/click-create-adb2.png " ")
 
 12.  Your instance will begin provisioning. In a few minutes, the state will turn from Provisioning to Available. At this point, your Autonomous Database is ready to use! Have a look at your instance's details here including its name, database version, OCPU count, and storage size.
 
