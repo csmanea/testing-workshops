@@ -149,6 +149,9 @@ This VCN will contain all of the other assets that you will create during this s
 
 _Congratulations! You have successfully completed the lab._
 
+Please *proceed to the next lab*.
+
+
 ## Acknowledgements
 
 - **Author** - Radu Chiru

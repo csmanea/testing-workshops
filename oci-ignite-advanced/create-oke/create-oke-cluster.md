@@ -52,45 +52,89 @@ Estimated time: 20-25 min
 *Optionally choose visibility of the Kubernetes Worker Nodes to Public Workers if you want public access to your nodes and number of nodes to 2 or 1 if you want reduced number of nodes*
     ![Select the required details.](images/configure-cluster-oke2.png " ")
 
+7. Select *AMD Rome E3 Flex*, then select **1** as number of OCPUs, and **16 GB** as the amount of memory, and under **Node Count** select **3** as number of nodes. 
 
-## Task 2: Acccess the OKE Cluster
+  Click **Next** at the bottom of the window.
 
-1. In the OCI Dashboard Menu go to: Developer Services-\> Container Clusters (OKE).
+    ![Select shape and node count](images/shape-image-cluster-oke.png " ")
 
+8. Review the resources to be created then click __Create cluster__.
 
-2. Select the compartment you created in lab 2 under List Scope and click **Create Cluster**.
+ ![Click on Create Cluster](images/review-cluster-oke.png " ")
 
+  On the next page, make sure all the components are checked then click **Close**.
+ ![Click on Create Cluster](images/progress-create-cluster-oke.png " ")
 
-3. Provide a name for the cluster, then select the QUICK CREATE option and click the **Launch Workflow** button.
+ >Note: Cluster creation process can take a few minutes.
 
+9.  Your cluster will begin provisioning. In a few minutes, the state will turn from Provisioning to Available. At this point, your OKE cluster is ready to use! Have a look at your cluster's details here including its name, node pools, Kubernetes version, and metrics.
 
-4. Select VM.Standard2.1 for SHAPE and 3 (or less if you don't want to create a 3 workernodes nodepool) for the NUMBER OF NODES (this number is the VMs that will be created into the node pool). Then click **NEXT**. Leave the rest of the parameters as defaults.
-
-
-5. Review the cluster information before to create it, and click **Create Cluster** or back to modify cluster options.
-
-
-6. The previous QUICK CREATE Option will setup a 3 nodes Kubernetes Cluster with predefined Virtual Cloud Network, 3 Subnets, Security Lists, Route tables. When you are done with checks, please click **Close**.
-
-  *Note: Cluster creation process can take a few minutes.*
+  ![Cluster homepage state provisioning.](images/state-creating-cluster-oke.png " ")
+  ![Cluster homepage state available.](images/state-available-cluster-oke.png " ")
 
 
+## Task 2: Acccess the OKE Cluster and Deploy a Hello World application
 
-7. Then you are taken to the Cluster Information page. Please copy Cluster id and don’t forget to make a note in a txt file as you will need this data later.
+1. On the cluster view, click on the **Access Cluster** button.
+
+  ![Click on Access Cluster](images/click-access-cluster-oke.png" ")
+
+2. Leave the **Cloud Shell Access** selected. If Cloud Shell is not already open, click on **Launch Cloud Shell**, then **copy** the OCI CLI command to create the kubeconfig and **paste** on the Cloud Shell Terminal.
+
+  ![Click on Access Cluster](images/cloudshell-access-cluster-oke.png " ")
+
+3. Check the **version** of your kubectl client and kubernetes server with kubectl:
+
+    ```
+    <copy> kubectl version
+    ```
+
+3. Deploy a sample **Hello World** application by running the following command in your terminal:
+
+    ```
+    <copy> kubectl create -f https://k8s.io/examples/application/deployment.yaml
+    ```
+
+4. The following command creates a **Deployment** and an associated **ReplicaSet**. The ReplicaSet has five Pods each of which runs the **Hello World** application.
+
+    ```
+    <copy> kubectl apply -f https://k8s.io/examples/service/load-balancer-example.yaml
+
+    ```
+
+5. Create a **Service** object that exposes the deployment:
+
+    ```
+    <copy> kubectl expose deployment hello-world --type=LoadBalancer --name=my-service
+
+    ```
+
+6. Display information about the **Service**:
+
+    ```
+    <copy> kubectl expose deployment hello-world --type=LoadBalancer --name=my-service
+    
+    ```
+
+ >Note: The *type=LoadBalancer* service is backed by external cloud providers, which is not covered in this example, please refer to this page for the details.
+
+ >Note: If the external IP address is shown as <pending>, wait for a minute and enter the same command again.
 
 
-8. It will take several minutes for the cluster to be created and you may need to refresh the page. Once created, you can scroll down and select **Node Pools** under the Resources area, you can check that a node pool with three node clusters has been created.
 
 
-  *Note: you may find that Compute nodes have not been created yet as. This process can take several minutes as compute instances have to be created and then started:*
+7. Use the **external IP address** (LoadBalancer Ingress) to access the **Hello World** application:
+
+    ```
+    <copy> curl http://<_external-ip>:<_port>
+
+    
+    ```
+
+![Deploy a Hello World app](images/cloudshell-commands-deploy-app-oke.png " ")
 
 
-9. Now your Kubernetes Cluster is created. But we need to run some extra steps to get started with managing the Kubernetes Cluster.
-
-  Click **Quick Start** under the Resources area. This section explains the steps to access your Cluster dashboard by using Kubectl. It is also explains how to install OCIcli and kubectl to access to Kubernetes management tool:
-
-
-  You can proceed to the next lab.
+_Congratulations! You have successfully completed the lab._
 
 ## Want to Learn More?
 
@@ -98,6 +142,6 @@ Estimated time: 20-25 min
 * [Oracle Container Engine for Kubernetes Documentation](https://docs.cloud.oracle.com/en-us/iaas/Content/ContEng/Concepts/contengoverview.htm)
 
 ## Acknowledgements
-* **Authors** -  Iván Postigo, Jesus Guerra, Carlos Olivares - Oracle Spain SE Team
-* **Contributors** - Jaden McElvey, Technical Lead - Oracle LiveLabs Intern
-* **Last Updated By/Date** - Madhusudhan Rao, Apr 2022
+* **Authors** -  Cristian Manea - Oracle DCX Team
+*
+* **Last Updated By/Date** - Cristian Manea, March 2023
