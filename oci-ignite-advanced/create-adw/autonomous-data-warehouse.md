@@ -169,7 +169,7 @@ To create a new mTLS connection to Autonomous Database, do the following:
 
 3. Click on the **"+"** next to the database connection *IGNITEADW* on the left side to expand the database content and start testing it.
 
-    ![Connection succesful](images/connection-successful-sqldeveloper.png" ")
+    ![Connection succesful](images/connection-successful-sqldeveloper.png " ")
 
 4. **Copy** the following Query the Sample Sales History Data Set and **Paste** it in the SQL Developer worksheet:
 
@@ -189,9 +189,14 @@ GROUP BY channel_desc;
 Click the green **"Play"** button to run the statement.
 ![Paste the sample Query in the SQL worksheet and Run it](images/sample-query-sqldeveloper.png " ")
 
+5. Check the **Query Result** .
+
+![Sample Query Result](images/sample-query-result-sqldeveloper.png " ")
+
+
     
 
-
+See this [tutorial](https://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/adwc/OBE_Running%20a%20Query%20on%20Sample%20Data/running_a_query_on_sample_data.html#QuerytheSampleStarSchemaBenchmarkDataSet) to test the performance of different Autonomous Data Warehouse configurations.
 
 
 Please *proceed to the next lab*.
