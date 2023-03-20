@@ -12,11 +12,12 @@ Estimated time: 20 - 25 min
 
 ### Prerequisites
 
-This lab assumes you have completed the following labs:
-* Lab: Sign up for a Free Trial
-* Lab: Provision a DevCS Instance
-* Lab: Build Virtual Machines in Developer Cloud Service
-
+* This lab requires completion of the **Get Started** section in the Contents menu on the left.
+* [Familiarity with OCI console](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/console.htm)
+* [Overview of Networking](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm)
+* [Oracle Cloud basics](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/concepts.htm)
+* [Connecting to a compute instance](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/accessinginstance.htm)
+* Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create a Level 100 environment for you to use on your tenancy.
 ## Task 1: Create Policies
 
 1. Start by creating a policy that allows Service OKE to be created and manage all resources in this tenancy. To do this open the menu and go to Identity-\>Policies.
