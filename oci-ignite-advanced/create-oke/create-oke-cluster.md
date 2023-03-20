@@ -112,16 +112,12 @@ Estimated time: 20-25 min
 6. Display information about the **Service**:
 
     ```
-    <copy> kubectl expose deployment hello-world --type=LoadBalancer --name=my-service
-    
+    <copy> kubectl get services my-service
+        
     ```
 
- >Note: The *type=LoadBalancer* service is backed by external cloud providers, which is not covered in this example, please refer to this page for the details.
-
- >Note: If the external IP address is shown as <pending>, wait for a minute and enter the same command again.
-
-
-
+ >Note: The *type=LoadBalancer* service is backed by external cloud providers, which is not covered in this example, please refer to this [page](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) for the details. 
+  If the external IP address is shown as *pending*, wait for a minute and enter the same command again.
 
 7. Use the **external IP address** (LoadBalancer Ingress) to access the **Hello World** application:
 
@@ -143,5 +139,4 @@ _Congratulations! You have successfully completed the lab._
 
 ## Acknowledgements
 * **Authors** -  Cristian Manea - Oracle DCX Team
-*
 * **Last Updated By/Date** - Cristian Manea, March 2023
