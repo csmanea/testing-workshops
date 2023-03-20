@@ -116,11 +116,49 @@ In this lab, you will:
 
 2. Click on **Add access control rule**:
 
-    ![Add access control rule](images/adb-add-access-control-rule.png" ")
+    ![Add access control rule](images/adb-add-access-control-rule.png " ")
 
-3. Click on **Add my IP address**:
+3. Click on **Add my IP address** and click **Save** on the bottom of the window:
 
-    ![Add your IP address](images/adb-access-control-list-add-myip.png" ")
+    ![Add your IP address](images/adb-access-control-list-add-myip.png " ")
+
+4. Click on **Database connection**:
+
+    ![Access Database connection options](images/adb-database-connection.png " ")
+
+4. Under **Wallet type**, choose **Instance Wallet** and  click on **Download wallet**. 
+
+    ![Download client credentials (Wallet)](images/adb-database-connection-download-wallet.png " ")
+
+5. Please create a **password** for this wallet. Some database clients will require that you provide both the wallet and password to connect to your database (other clients will auto-login using the wallet without a password).
+
+    ![Choose a password for Wallet](images/adb-download-wallet-password.png " ")
+
+    Choose a location to save the *wallet.zip* file.
+
+    Click the **Close** button at the bottom of the screen.
+
+6. Open SQL Developer tool, and click on the **green cross** to add a new/select database connection:
+
+    ![Add a new connection in SQL Developer](images/new-connection-sqldeveloper.png " ")
+
+7. Configure the database connection:
+
+    - __Name__ - Enter the name *IGNITEADW* of the created database.
+    - __Add the credentials__ - Fill in the username *ADMIN* and password *Oracle123!!!* chosen when we provisioned the database (__*Task 2, Step 7*__)
+    - __Connection Type__ - For this lab, specify __Cloud Wallet__. Browse the location where you saved the *wallet.zip* in __*Step 5*__ and **select the .zip file**.
+    - __Storage (TB)__ - Select your storage capacity in terabytes. For this lab, specify __1 TB__ of storage. Or, if you choose an Always Free database, it comes with 20 GB of storage.
+    - __Auto Scaling__ - For this lab, keep auto scaling enabled, to enable the system to automatically use up to three times more CPU and IO resources to meet workload demand.
+    
+    > **Note:** You cannot scale up/down an Always Free autonomous database.
+
+    ![Configure the database connection parameters.](images/configure-connection-sqldeveloper.png " ")
+
+
+
+
+    
+
 
 
 
