@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab you will create a Kubernetes Cluster to deploy a **Hello World** application.
+In this lab, you will create a Kubernetes Cluster to deploy a **Hello World** application.
 
 Estimated time: 20-25 min
 
@@ -18,10 +18,10 @@ Estimated time: 20-25 min
 * [Overview of Networking](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm)
 * [Oracle Cloud basics](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/concepts.htm)
 * [Connecting to a compute instance](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/accessinginstance.htm)
-* Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create a Level 100 environment for you to use on your tenancy.
+* Your **<font color="red">Oracle Cloud Account</font>** - During this workshop, we will create a Level 100 environment for you to use on your tenancy.
 ## Task 1: Create Kubernetes Cluster (OKE)
 
-1. To create an **OKE cluster**, open up the navigation menu in the top-left corner of the Console and go to **Developer Services** section, then click on **Kubernetes Clusters**.
+1. To create an **OKE cluster**, open up the navigation menu in the top-left corner of the Console and go to the **Developer Services** section, then click on **Kubernetes Clusters**.
 
   ![Navigate to Kubernetes Cluster](images/navigate-oke.png " ")
 
@@ -50,11 +50,11 @@ Estimated time: 20-25 min
 
   Select **Managed** for the **Node type**, and **Private workers** for the **Kubernetes worker nodes**.
 
-*Optionally choose visibility of the Kubernetes Worker Nodes to Public Workers if you want public access to your nodes and number of nodes to 2 or 1 if you want reduced number of nodes*
+*Optionally choose the visibility of the Kubernetes Worker Nodes to Public Workers if you want public access to your nodes and the number of nodes to 2 or 1 if you want a reduced number of nodes*
 
   ![Select the required details.](images/configure-cluster-oke2.png " ")
 
-7. Select *AMD Rome E3 Flex*, then select **1** as number of OCPUs, and **16 GB** as the amount of memory, and under **Node Count** select **3** as number of nodes. 
+7. Select *AMD Rome E3 Flex*, then select **1** as the number of OCPUs, and **16 GB** as the amount of memory, and under **Node Count** select **3** as the number of nodes. 
 
   Click **Next** at the bottom of the window.
 
@@ -67,7 +67,7 @@ Estimated time: 20-25 min
   On the next page, make sure all the components are checked then click **Close**.
  ![Click on Create Cluster](images/progress-create-cluster-oke.png " ")
 
- >**Note**: Cluster creation process can take a few minutes.
+ >**Note**: The cluster creation process can take a few minutes.
 
 9.  Your cluster will begin provisioning. In a few minutes, the state will turn from Provisioning to Available. At this point, your OKE cluster is ready to use! Have a look at your cluster's details here including its name, node pools, Kubernetes version, and metrics.
 
@@ -81,11 +81,11 @@ Estimated time: 20-25 min
 
   ![Click on Access Cluster](images/click-access-cluster-oke.png" ")
 
-2. Leave the **Cloud Shell Access** selected. If Cloud Shell is not already open, click on **Launch Cloud Shell**, then **copy** the OCI CLI command to create the kubeconfig and **paste** on the Cloud Shell Terminal.
+2. Leave the **Cloud Shell Access** selected. If Cloud Shell is not already open, click on **Launch Cloud Shell**, then **copy** the OCI CLI command to create the kubeconfig and **paste** it into the Cloud Shell Terminal.
 
   ![Click on Access Cluster](images/cloudshell-access-cluster-oke.png " ")
 
-3. Check the **version** of your kubectl client and kubernetes server with kubectl:
+3. Check the **version** of your kubectl client and Kubernetes server with kubectl:
 
     ```
     <copy> kubectl version
