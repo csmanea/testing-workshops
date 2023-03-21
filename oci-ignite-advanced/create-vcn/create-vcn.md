@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Oracle Cloud Infrastructure (OCI) Compute lets you create multiple Virtual Cloud Networks (VCNs). These VCNs will contain security lists, compute instances, load balancers and many other types of network assets.
+Oracle Cloud Infrastructure (OCI) Compute lets you create multiple Virtual Cloud Networks (VCNs). These VCNs will contain security lists, compute instances, load balancers, and many other types of network assets.
 
 Be sure to review [Overview of Networking](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm) to gain a full understanding of the network components and their relationships.
 
@@ -17,7 +17,7 @@ In this lab, you will:
 ### Prerequisites
 
 - This lab requires completion of the **Get Started** section in the Contents menu on the left.
--   Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create a basic environment for you to use on your tenancy.
+-   Your **<font color="red">Oracle Cloud Account</font>** - During this workshop, we will create a basic environment for you to use on your tenancy.
 
 
 
@@ -61,7 +61,7 @@ To create a VCN on Oracle Cloud Infrastructure:
 6. Once you see that the creation is complete (see previous screenshot), click the **View VCN** button.
 ## Task 2: Create a Route Table
 
-1. In the newly created VCN, navigate to Route Tables menu, and click **Create Route Table**.
+1. In the newly created VCN, navigate to the Route Tables menu, and click **Create Route Table**.
 2. Complete the following fields:
 
     |                  **Field**              |    **Value**  |
@@ -94,7 +94,7 @@ To create a VCN on Oracle Cloud Infrastructure:
 
 ## Task 3: Create a Security List
 
-1. In the VCN , navigate to Security Lists menu, and click **Create Security List**.
+1. In the VCN, navigate to the Security Lists menu, and click **Create Security List**.
 2. Complete the following fields 
 
 
@@ -123,7 +123,7 @@ To create a VCN on Oracle Cloud Infrastructure:
 
 ## Task 4: Create a Subnet to access Autonomous Database
 
-1. In the VCN , navigate to Subnets menu, and click **Create Subnet**.
+1. In the VCN, navigate to the Subnets menu, and click **Create Subnet**.
 2. Complete the following fields:
 
 
