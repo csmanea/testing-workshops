@@ -2,9 +2,9 @@
 
 ## Introduction
 
-Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous database that scales elastically, delivers fast query performance and requires no database administration. In this hands on lab, we will walk through deploying an Autonomous Data Warehouse database and loading a table using a text file that is stored in object storage. 
+Oracle Autonomous Data Warehouse Cloud provides an easy-to-use, fully autonomous database that scales elastically, delivers fast query performance, and requires no database administration. In this hands-on lab, we will walk through deploying an Autonomous Data Warehouse database and loading a table using a text file that is stored in object storage. 
 
-The purpose of this lab is to get familiar with Oracle Autonomous Data Warehouse primitives. At the end of this lab, you will be familiar with launching an Autonomous Data Warehouse database, using secure network access control list and connect to the instance via SQL Developer tool.
+The purpose of this lab is to get familiar with Oracle Autonomous Data Warehouse primitives. At the end of this lab, you will be familiar with launching an Autonomous Data Warehouse database, using a secure network access control list, and connecting to the instance via the SQL Developer tool.
 
 Estimated Time: 55 minutes
 
@@ -13,7 +13,7 @@ Estimated Time: 55 minutes
 In this lab, you will:
 
 -   Provision a new Autonomous Database
--   Connect to it via SQL Developer
+-   Connect to the Autonomous Database instance via SQL Developer
 ### Prerequisites
 
 * This lab requires completion of the **Get Started** section in the Contents menu on the left.
@@ -21,12 +21,12 @@ In this lab, you will:
 * [Overview of Networking](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm)
 * [Oracle Cloud basics](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/concepts.htm)
 * [Connecting to a compute instance](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/accessinginstance.htm)
-* Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create a Level 100 environment for you to use on your tenancy.
+* Your **<font color="red">Oracle Cloud Account</font>** - During this workshop, we will create a Level 100 environment for you to use on your tenancy.
 
 ## Task 1: Choose Autonomous Database from the Services Menu
 
 1. Log in to the [Oracle Cloud Console](https://cloud.oracle.com/).
-2. Once you log in, you arrive at the cloud services dashboard where you can see all the services available to you. Click the navigation menu in the upper left to show top level navigation choices and then click **Autonomous Database**.
+2. Once you log in, you arrive at the cloud services dashboard where you can see all the services available to you. Click the navigation menu in the upper left to show top-level navigation choices and then click **Autonomous Database**.
 
     ![Oracle home page.](images/navigate-adb.png " ")
 
@@ -58,11 +58,11 @@ In this lab, you will:
 
 6. Configure the database:
 
-    - __Always Free__ - If your Cloud Account is an Always Free account, you can select this option to create an always free autonomous database. An always free database comes with 1 CPU and 20 GB of storage. For this lab, we recommend you leave Always Free unchecked.
+    - __Always Free__ - If your Cloud Account is an Always Free account, you can select this option to create an always free autonomous database. An always-free database comes with 1 CPU and 20 GB of storage. For this lab, we recommend you leave Always Free unchecked.
     - __Choose database version__ - Select 19c as the database version.
-    - __OCPU count__ - Number of CPUs for your service. For this lab, specify __1 CPUs__. If you choose an Always Free database, it comes with 1 CPU.
+    - __OCPU count__ - Number of CPUs for your service. For this lab, specify __1 CPU__. If you choose an Always Free database, it comes with 1 CPU.
     - __Storage (TB)__ - Select your storage capacity in terabytes. For this lab, specify __1 TB__ of storage. Or, if you choose an Always Free database, it comes with 20 GB of storage.
-    - __Auto Scaling__ - For this lab, keep auto scaling enabled, to enable the system to automatically use up to three times more CPU and IO resources to meet workload demand.
+    - __Auto Scaling__ - For this lab, keep auto-scaling enabled, to enable the system to automatically use up to three times more CPU and IO resources to meet workload demand.
     
     >**Note:** You cannot scale up/down an Always Free autonomous database.
 
@@ -70,7 +70,7 @@ In this lab, you will:
 
 7. Create administrator credentials:
 
-    - __Password and Confirm Password__ - Specify the password for ADMIN user of the service instance. The password must meet the following requirements:
+    - __Password and Confirm Password__ - Specify the password for the **ADMIN** user of the service instance. The password must meet the following requirements:
     - The password must be between 12 and 30 characters long and must include at least one uppercase letter, one lowercase letter, and one numeric character.
     - The password cannot contain the username.
     - The password cannot contain the double quote (") character.
@@ -85,9 +85,9 @@ In this lab, you will:
     - If you want to allow traffic from everywhere, select **Secure access from everywhere**.
     - If you want to allow traffic only from the IP addresses and VCNs you specify - where access to the database from all public IPs or VCNs is blocked, select **Secure access from allowed IPs and VCNs only** in the Choose network access area.
     - If you want to restrict access to a private endpoint within an OCI VCN, select **Private endpoint access only** in the Choose network access area.
-    - If the **Require mutual TLS (mTLS) authentication** option is selected, mTLS will be required to authenticate connections to your Autonomous Database. TLS connections allow you to connect to your Autonomous Database without a wallet, if you use a JDBC thin driver with JDK8 or above. See the [documentation for network options](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/support-tls-mtls-authentication.html#GUID-3F3F1FA4-DD7D-4211-A1D3-A74ED35C0AF5) for options to allow TLS, or to require only mutual TLS (mTLS) authentication.
+    - If the **Require mutual TLS (mTLS) authentication** option is selected, mTLS will be required to authenticate connections to your Autonomous Database. TLS connections allow you to connect to your Autonomous Database without a wallet if you use a JDBC thin driver with JDK8 or above. See the [documentation for network options](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/support-tls-mtls-authentication.html#GUID-3F3F1FA4-DD7D-4211-A1D3-A74ED35C0AF5) for options to allow TLS, or to require only mutual TLS (mTLS) authentication.
 
-    - For this lab, select, **Secure access from allowed IPs and VCNs only**. Then under __IP notation type__ choose **Virtual Cloud Network** and select the **VCN-Workshop** created in *Lab 1: Create a Virtual Cloud Network*. 
+    - For this lab, select, **Secure access from allowed IPs and VCNs only**. Then under the __IP notation type__ choose **Virtual Cloud Network** and select the **VCN-Workshop** created in *Lab 1: Create a Virtual Cloud Network*. 
 
     ![Choose the network access type.](images/adb-network-access.png " ")
 
@@ -108,7 +108,7 @@ In this lab, you will:
 
     ![Database instance homepage.](images/adb-state.png " ")
 
-13. After instance is provisioned (state changes from **Provisioning** to **Available**), click on **Edit** in the **Network** category, **Access control list** section:
+13. After the instance is provisioned (state changes from **Provisioning** to **Available**), click on **Edit** in the **Network** category, **Access control list** section:
 
     ![Edit Access control list](images/modify-access-control-list-adb.png " ")
 
@@ -116,7 +116,7 @@ In this lab, you will:
 
     ![Add access control rule](images/adb-add-access-control-rule.png " ")
 
-15. Click on **Add my IP address** and click **Save** on the bottom of the window:
+15. Click on **Add my IP address** and click **Save** at the bottom of the window:
 
     ![Add your IP address](images/adb-access-control-list-add-myip.png " ")
 
@@ -137,7 +137,7 @@ In this lab, you will:
     Click the **Close** button at the bottom of the screen.
 ## Task 3: Connect to the Autonomous Database instance via SQL Developer
 
-Oracle SQL Developer is a free integrated development environment that simplifies the development and management of Autonomous Database.
+Oracle SQL Developer is a free integrated development environment that simplifies the development and management of an Autonomous Database.
 
 SQL Developer can connect to Autonomous Database and contains enhancements for key Autonomous Database features. You can download the latest version of Oracle SQL Developer for your platform from the Download link on this page: [Oracle SQL Developer](https://www.oracle.com/database/technologies/appdev/sql-developer.html).
     ![Access SQL Developer](images/download-sqldeveloper.png " ")
@@ -150,7 +150,7 @@ For connecting with TLS authentication, Oracle SQL Developer provides support us
 To create a new mTLS connection to Autonomous Database, do the following:
 
 
-1. Open SQL Developer tool, and click on the **green cross** to add a new/select database connection:
+1. Open the SQL Developer tool, and click on the **green cross** to add a new/select database connection:
 
     ![Add a new connection in SQL Developer](images/new-connection-sqldeveloper.png " ")
 
@@ -163,7 +163,7 @@ To create a new mTLS connection to Autonomous Database, do the following:
     - __Add the credentials__ - Fill in the database username *ADMIN* and password *Oracle123!!!* chosen when we provisioned the database (__*Task 2, Step 7*__)
     - __Connection Type__ - For this lab, specify __Cloud Wallet__ (if you are using SQL Developer 18.2, this is **Cloud PDB**). Browse the location where you saved the *wallet.zip* in __*Step 5*__ and **select the .zip file**.
     - __Service__ - Enter the database TNS name. The client credentials file includes a *tnsnames.ora* file that provides database TNS names with corresponding services.
-    - __Auto Scaling__ - For this lab, keep auto scaling enabled, to enable the system to automatically use up to three times more CPU and IO resources to meet workload demand.
+    - __Auto Scaling__ - For this lab, keep auto-scaling enabled, to enable the system to automatically use up to three times more CPU and IO resources to meet workload demand.
     
     Click **Test** to test the database connection. If *Status:Success* then click **Connect** to connect to the database.
 
@@ -176,7 +176,7 @@ To create a new mTLS connection to Autonomous Database, do the following:
 
     ![Connection succesful](images/connection-successful-sqldeveloper.png " ")
 
-2. Click on the **Copy** button below to copy **Sample Sales History Data Set** Query and **Paste** it in the SQL Developer worksheet:
+2. Click on the **Copy** button below to copy **Sample Sales History Data Set** Query and **Paste** it into the SQL Developer worksheet:
 
     ```
     <copy>
@@ -194,7 +194,7 @@ GROUP BY channel_desc;
 3. Click the green **"Play"** button to run the statement.
 ![Paste the sample Query in the SQL worksheet and Run it](images/sample-query-sqldeveloper.png " ")
 
-4. Check the **Query Result** .
+4. Check the **Query Result**.
 
 ![Sample Query Result](images/sample-query-result-sqldeveloper.png " ")
 

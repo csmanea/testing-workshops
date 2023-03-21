@@ -23,7 +23,7 @@ In this workshop, you will:
 **<font color="blue">Optional</font>**:
  - Create a Kubernetes Cluster
 ### Prerequisites
-Your **<font color="red">Oracle Cloud Account</font>** - During this workshop we will create a Level 100 environment for you to use on your tenancy.
+Your **<font color="red">Oracle Cloud Account</font>** - During this workshop, we will create a Level 100 environment for you to use on your tenancy.
 
 
 ## About Oracle Cloud Infrastructure
