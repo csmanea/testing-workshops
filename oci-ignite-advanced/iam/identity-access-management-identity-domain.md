@@ -30,7 +30,7 @@ In this section, you will revise the Ignite knowledge:
 
 A compartment is a collection of cloud assets, like compute instances, load balancers, databases, etc. By default, a root compartment was created for you when you created your tenancy (i.e. when you registered for the trial account). It is possible to create everything in the root compartment, but Oracle recommends that you create sub-compartments to help manage your resources more efficiently.
 
-1. Click the **Navigation Menu** in the upper left, navigate to **Identity & Security** and select **Compartments**.
+1. Click the **Navigation Menu** in the upper left, navigate to **Identity & Security**, and select **Compartments**.
 
  ![Navigation Menu](images/id-compartments.png " ")
 
@@ -45,11 +45,11 @@ A compartment is a collection of cloud assets, like compute instances, load bala
 
 ##  Task 2: Manage Users, Groups, and Policies to Control Access
 
-A user's permissions to access services comes from the _groups_ to which they belong. The permissions for a group are defined by policies. Policies define what actions members of a group can perform, and in which compartments. Users can access services and perform operations based on the policies set for the groups of which they are members.
+A user's permission to access services comes from the _groups_ to which they belong. The permissions for a group are defined by policies. Policies define what actions members of a group can perform, and in which compartments. Users can access services and perform operations based on the policies set for the groups of which they are members.
 
 We'll create a user, a group, and a security policy to understand the concept.
 
-In 2022, OCI IAM introduced Identity Domains. An identity domain is a container for managing users and roles, federating and provisioning of users, secure application integration through Oracle Single Sign-On (SSO) configuration, and OAuth administration.
+In 2022, OCI IAM introduced Identity Domains. An identity domain is a container for managing users and roles, federating and provisioning users, secure application integration through Oracle Single Sign-On (SSO) configuration, and OAuth administration.
 
 1. Click the **Navigation Menu** in the upper left. Navigate to **Identity & Security** and select **Domains**
 
@@ -81,11 +81,11 @@ For IAM with Identity Domains, what was identified before as IAM users and group
 
 1. Create a New User
 
-   a) In the bread crumb, click on **Default Domain**
+   a) In the breadcrumb, click on **Default Domain**
 
    ![Select Default domain in the bread crumb](images/id-domains-bc-default-domain.png)
 
-   You can also click the **Navigation Menu** in the upper left, navigate to **Identity & Security** and select **Domains**, select the default domain and then go to **Users**
+   You can also click the **Navigation Menu** in the upper left, navigate to **Identity & Security**, and select **Domains**, select the default domain and then go to **Users**
 
    b) Select **Users**
 
@@ -97,8 +97,8 @@ For IAM with Identity Domains, what was identified before as IAM users and group
 
       - **First Name** - your first name
       - **Last NameName** - your last name
-      - **Email:**  Preferably use a personal email address to which you have access (GMail, Yahoo, etc) and different from any email already in use in the tenancy.
-      - **Use the email address as the username:** Leave checked unless if you want to use an username that is not the email. It can be used if you want to use the same email already in use in the tenancy.
+      - **Email:**  Preferably use a personal email address to which you have access (Gmail, Yahoo, etc) and different from any email already in use in the tenancy.
+      - **Use the email address as the username:** Leave checked unless you want to use a username that is not the email. It can be used if you want to use the same email already in use in the tenancy.
       - **Assign cloud account administrator role:** Leave unchecked.
       - Check the box besides **oci-group**
 
@@ -116,9 +116,9 @@ For IAM with Identity Domains, what was identified before as IAM users and group
 
       ![Reset password](images/id-domains-user-resetpw.png)
 
-   After clicking in the reset button, your will prompted for confirmation before the reset link is sent.
+   After clicking on the reset button, your will be prompted for confirmation before the reset link is sent.
 
-1. Check the messges in the email account you used for the new user. Open the activation link (password reset will take to a similar screen)
+1. Check the messages in the email account you used for the new user. Open the activation link (password reset will take you to a similar screen)
 
    ![Reset password](images/id-domains-resetpw.png)
 
@@ -128,7 +128,7 @@ For IAM with Identity Domains, what was identified before as IAM users and group
 
    ![IAM Policy](images/iam-policies.png)
 
-   b) On the left side, select **Workshop** compartment. After you have selected the **Workshop** compartment, click **Create Policy**.
+   b) On the left side, select the **Workshop** compartment. After you have selected the **Workshop** compartment, click **Create Policy**.
 
    ![Click on Create Policy](images/id-domain-create-policy.png)
 
@@ -140,7 +140,7 @@ For IAM with Identity Domains, what was identified before as IAM users and group
 
    d) Enter a **Description** (for example, "Policy for OCI Group").
 
-   e) Select **Workshop** for compartment.
+   e) Select **Workshop** for the compartment.
 
    f) Click **Show manual editor** and enter the following **Statement**:
 
