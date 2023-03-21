@@ -75,7 +75,7 @@ Estimated time: 20-25 min
   ![Cluster homepage state available.](images/state-available-cluster-oke.png " ")
 
 
-## Task 2: Acccess the OKE Cluster and Deploy a Hello World application
+## Task 2: Access the OKE Cluster and Deploy a Hello World application
 
 1. On the cluster view, click on the **Access Cluster** button.
 
