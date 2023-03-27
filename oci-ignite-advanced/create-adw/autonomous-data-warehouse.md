@@ -145,7 +145,7 @@ SQL Developer can connect to Autonomous Database and contains enhancements for k
 
 For connecting with mTLS authentication, Oracle SQL Developer provides support for wallet files using the Cloud Wallet Connection Type. Oracle recommends that you use version 18.2 (or later); however, earlier versions of SQL Developer will work with Autonomous Database using an Oracle Wallet.
 
-For connecting with TLS authentication, Oracle SQL Developer provides support using the Custom JDBC Connection Type. See Connect with Oracle SQL Developer with TLS Authentication for details on connecting using TLS authentication.
+For connecting with TLS authentication, Oracle SQL Developer provides support using the Custom JDBC Connection Type. See [Connect with Oracle SQL Developer with TLS Authentication](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/connect-sqldev-tls.html#GUID-811258A7-E975-4854-A37F-CF268EA99C82) for details on connecting using TLS authentication.
 
 To create a new mTLS connection to Autonomous Database, do the following:
 
