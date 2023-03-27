@@ -23,7 +23,11 @@ In this workshop, you will:
 **<font color="blue">Optional</font>**:
  - Create a Kubernetes Cluster
 ### Prerequisites
-Your **<font color="red">Oracle Cloud Account</font>** - During this workshop, we will create a Level 100 environment for you to use on your tenancy.
+* [Familiarity with OCI console](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/console.htm)
+* [Overview of Networking](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm)
+* [Oracle Cloud basics](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/concepts.htm)
+* [Connecting to a compute instance](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/accessinginstance.htm)
+* Your **<font color="red">Oracle Cloud Account</font>** - During this workshop, we will create a Level 100 environment for you to use on your tenancy.
 
 
 ## About Oracle Cloud Infrastructure
